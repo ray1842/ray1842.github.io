@@ -1,1 +1,376 @@
+<!DOCTYPE html>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&display=swap" rel="stylesheet">
+  <style>
+  body,html{
+    height:100%;
+    margin:0;
+    font-family:'Montserrat Alternates',sans-serif;
+    color:white;
+    font-size:24px;
+    width:100vw;
+    top:0;
+    left:0;
+    
+  }
+  @media (max-width:1200px){
+    html{
+      font-size:50%;
+      }
+    }
+    @media (max-width:960px){
+      html{
+        font-size:50%;
+      }
+    }
+   
+  /*Navbar style code*/
+  #nav-bar{
+    display:flex;
+    background-color:rgb(15,34,45);
+    color:rgb(204,0,153);
+    font-style:bold;
+    position:fixed;
+    font-weight:500;
+    top:0;
+  }
+  #content{
+    display:grid;
+    grid-template-columns: 1vw 65vw 34vw;
+  }
+  #nav-col1{
+    grid-column: 1;
+  }
+  #logo{
+    height:10vh;
+  }
+  #nav-col2{
+    grid-column:2;
+    margin-top:3.75vh;
+    font-size:0.7rem;
+  }
+  .nav-link{
+    color:rgb(204,0,153);
+    font-style:bold;
+    font-weight:500;
+    text-decoration: none;
+    margin-right:4vw;
+  }
+  #nav-col3{
+    grid-column: 3;
+    margin-top:3.75vh;
+  }
+  .appstore-img{
+    height:3vh;
+  }
+  @media (max-width:1200px){
+    #nav-col2, #nav-col3{
+      font-size:16.8px;
+      }
+    }
+    @media (max-width:960px){
+      #nav-col2, #nav-col3{
+        font-size:16.8px;
+      }
+    }
+    @media (max-width:500px){
+      #nav-col2, #nav-col3{
+        margin-top:5vh;
+        font-size:16.8px;
+      }
+    }
+    @media (max-width:1200px){
+      .appstore-img{
+      height:3vh;
+      }
+    }
+    @media (max-width:960px){
+      .appstore-img{
+        height:2.5vh;
+      }
+    }
+    @media (max-width:500px){
+      .appstore-img{
+        height:1vh;
+      }
+    }
 
+    /*Main body code*/
+    #home, #story, #app{
+      position:relative;
+      background-attachment:fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    @media only screen and (max-device-width:1024px){
+      #home,#story,#app{
+          background-attachment:scroll;
+      }
+    }
+    /*Home Section*/
+    #home{
+      background-image:url("https://i.pinimg.com/originals/7e/ac/b5/7eacb506f9a39bd5b2c4fc234fb91d94.png");
+      height:100%;
+    }
+    .intro-cap{
+      display:flex;
+      justify-content: center;
+      color: white;
+      font-family:'Montserrat Alternates',sans-serif;
+      font-size: 2.5rem;
+      position: relative;
+      margin:auto;
+      max-height:auto;
+    }
+
+    /*Story and Mission statement Section*/
+    #story{
+      background-image: url("https://i.pinimg.com/originals/8b/49/03/8b49037c714051d13de9eba73b62cea5.png");
+      min-height:100%;
+    }
+    .m1{
+      display:flex;
+      justify-content: center;
+    }
+    .m2{
+      display:flex;
+      justify-content: center;
+    }
+    #video{
+      width:50vw; 
+      position: relative;
+      margin:auto;
+      max-width:100%;
+      max-height:auto;
+      top:20vh;
+    }
+    .mission-statement{
+      padding-left:10vw;
+      color:white;
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-size:0.625rem;
+      letter-spacing: 0px;
+      padding-top:27vh;
+      max-width: 100%;
+      height:auto;
+    }
+    @media (max-width:1200px){
+      .mission-statement{
+      font-size:100%;
+      }
+    }
+    @media (max-width:960px){
+      .mission-statement{
+        font-size:30%;
+      }
+    }
+    @media (max-width:500px){
+      .mission-statement{
+        font-size:25%;
+      }
+    }
+
+    /*App Section*/
+    #app{
+      background-image:url("https://i.pinimg.com/originals/9d/16/79/9d16798b12696d382a630152e7baa56e.jpg");
+      height:100%;
+    }
+    
+    @media (max-width:960px){
+      .app-img{
+        width:9%;
+        display:flex;
+        justify-content: center;
+        height:100vh;
+      }
+    }
+    @media (max-width:500px){
+      .app-img{
+        width:70%;
+        display:flex;
+        justify-content: center;
+        height:100vh;
+      }
+    }
+    .app-img{
+      padding-top:5vh;
+      background-color: transparent;
+      margin:auto;
+      max-width:100%;
+      max-height:auto;
+      margin-left:5vw;
+    }
+    @media only screen and (max-device-width:1200px){
+      .app-img{
+          background-attachment:scroll;
+      }
+    }
+    @media (max-width:960px){
+      .app-img{
+        width:90%;
+        display:flex;
+        justify-content: center;
+        height:100vh;
+      }
+    }
+    @media (max-width:500px){
+      .app-img{
+        width:90%;
+        display:flex;
+        justify-content: center;
+        height:100vh;
+      }
+    }
+
+    /*Footer Section*/
+    .footer-container{
+      display:grid;
+      background-color: rgb(204,0,153);
+    }
+    .d1{
+      grid-column: 1;
+      background-color: rgb(204,0,153);
+    }
+    .d2{
+      grid-column: 2;
+      justify-self:end;
+      margin-right:5vw;
+      background-color: rgb(204,0,153);
+    }
+    .footer-logo{
+      padding-left:2vw; 
+      height:100px; 
+      width:100px;
+      max-width: 100%;
+      height:auto;
+    }
+    #contact{
+      color:white;
+      font-family: 'Montserrat Alternates', sans-serif;
+      padding-left:2.5vw;
+      font-size:14px;
+      letter-spacing: 0px;
+      padding-top:2px;
+      max-width: 100%;
+      height:auto;
+    }
+    
+    #form{
+      margin-top:5vh;
+      max-width: 100%;
+      height:auto;
+    }
+    #email{
+      font-size:16px;
+      color:gray;
+      max-width: 100%;
+      border-color:transparent;
+      padding-left:1vw;
+      padding-top:4vh;
+      border-radius:15px;   
+    }
+    #subscribe{
+      color:white;
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-size:14px;
+    }
+    #submit{
+      position:relative;
+      margin-top:0.417rem;
+      border-radius:0.625rem;
+      font-size:0.67rem;
+      border-style: solid;
+      border-width: thin;
+      color:white;
+      height:auto;
+      background-color:rgb(204,0,153);
+      
+    }
+    @media (max-width:1200px){
+      #submit{
+      font-size:1.5rem;
+      }
+    }
+    
+  </style>
+  <body>
+    <section id="home">
+      <p class="intro-cap" style="padding-top:15vh;">Discover</p>
+      <p class="intro-cap" style="padding-top:55vh;">Now</p>
+    </section>
+
+    <section id="story">
+        <div class="m1">
+          <iframe id="video" width="480" height="260" src="https://www.youtube.com/embed/PmEDAzqswh8" 
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="m2">
+          <p class="mission-statement">Phi, is a new social media platform that aims to offer foster more organic friendships online.<br>
+          Our name Phi is derived from the Greek work for freindship. We're offering a social media platform, unlike the ones currently<br>
+          on the internet. Phi doesn't use manipulative tactics in order to get you addicted to our product. Phi, doesn't treat you as a product <br>
+          like other social media platforms do, by harvesting your data. Also, our layout has a minimalist design, devoid of unecessary<br>
+          algorithms. Also, our platform is open source, offering you, the consumer, the ability to track changes to the platform <br>
+          and hold us accountable for any security or privacy flaws, you may find. Something, which no other social media plaform allows.</p>
+      </div>
+    </section>
+
+    <section id="app">
+      <img class="app-img" src="https://i.pinimg.com/originals/32/e2/7a/32e27afe9679ebbb56e7a631e19cc309.png">
+    </section>
+
+    <section class="footer-container">
+      <div class="d1">
+        <img class="footer-logo" src="https://i.pinimg.com/originals/c1/7b/78/c17b784676fae077f933246ee24a3d3d.jpg">
+        <p id="contact">Phi Labs, LLC. <br> <a style="text-decoration: none; color:white;" href="https://www.themart.com">
+        222 W Merchandise Mart Plaza • 60654, Chicago, IL</a> <br> support@phi.co</p>
+      </div>
+      <div class="d2">
+        <form id="form"action=" https://www.freecodecamp.com/email-submit">
+          <label for="subscribe" id="subscribe">To receive news about Phi, subscribe below.</label><br><br>
+          <input id="email" name="email" type="email" required placeholder="email">
+          <input id="submit" name="submit" type="submit">
+        </form>
+      </div>
+    </section>
+
+    <nav id="nav-bar">
+      <div id="content">
+        <div id="nav-col1">
+          <a href="#home">
+            <img id="logo" src="https://i.pinimg.com/originals/21/61/af/2161af4ccd5796eb4bddef5a5ac60695.jpg" alt="Company Logo">
+          </a>
+        </div>
+        <div id="nav-col2">
+          <a href="#home" class="nav-link"style="padding-left:30vw;">
+            Home
+          </a>
+          <a href="#story" class="nav-link">
+            Our Story
+          </a>
+          <a href="#app" class="nav-link">
+            The App
+          </a>
+          <a href="#contact" class="nav-link">
+            Contact
+          </a>
+        </div>
+        <div id="nav-col3">
+          <a  class="appstore" href="https://www.apple.com/ios/app-store/" target="_blank" style="padding-left:20vw;">
+            <img 
+            class="appstore-img" 
+            src="https://static1.squarespace.com/static/5b8554f675f9ee4826384e83/t/5cde8590a1fb05000100c260/1558087056301/app-store-badge-rgb.png" 
+            alt="App Store Logo">
+          </a>
+            <a  class="appstore" href="https://play.google.com/store?hl=en_US" target="_blank">
+            <img 
+            class="appstore-img"
+            src="https://static1.squarespace.com/static/5b8554f675f9ee4826384e83/t/5cde8293a44f1900017b75c8/1558086291965/google-play-badge-rgb.png" 
+            alt="App Store Logo">
+          </a>
+        </div>
+      </div>      
+    </nav>
+
+   
+  </body>
+</html>
