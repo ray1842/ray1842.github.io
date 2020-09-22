@@ -1,5 +1,6 @@
 <!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
   body,html{
     height:100%;
@@ -10,7 +11,7 @@
     width:100vw;
     top:0;
     left:0;
-    margin:0;
+    
   }
   @media (max-width:1200px){
     html{
@@ -46,6 +47,7 @@
   #nav-col2{
     grid-column:2;
     margin-top:3.75vh;
+    font-size:0.7rem;
   }
   .nav-link{
     color:rgb(204,0,153);
@@ -53,62 +55,28 @@
     font-weight:500;
     text-decoration: none;
     margin-right:4vw;
-    font-size:0.7rem;
   }
-  @media (max-width:1200px){
-    .nav-link{
-      font-size:0.7rem;
-      margin-right:4vw;
-      }
-    }
-    @media (max-width:960px){
-      .nav-link{
-        font-size:0.7rem;
-        margin-right:3.2vw;
-      }
-    }
-    @media (max-width:500px){
-      .nav-link{
-        font-size:0.7rem;
-        margin-right:1.75vw;
-      }
-    }
   #nav-col3{
     grid-column: 3;
     margin-top:3.75vh;
   }
+  .appstore-img{
+    height:3vh;
+  }
   @media (max-width:1200px){
     #nav-col2, #nav-col3{
-      font-size:16.8px;
+      font-size:50%;
       }
     }
     @media (max-width:960px){
       #nav-col2, #nav-col3{
-        font-size:16.8px;
+        font-size:30%;
       }
     }
     @media (max-width:500px){
       #nav-col2, #nav-col3{
         margin-top:5vh;
-        font-size:16.8px;
-      }
-    }
-  .appstore-img{
-    height:3vh;
-  }
-    @media (max-width:1200px){
-      .appstore-img{
-      height:3vh;
-      }
-    }
-    @media (max-width:960px){
-      .appstore-img{
-        height:2.5vh;
-      }
-    }
-    @media (max-width:600px){
-      .appstore-img{
-        height:1vh;
+        font-size:20%;
       }
     }
 
@@ -128,7 +96,7 @@
     /*Home Section*/
     #home{
       background-image:url("https://i.pinimg.com/originals/7e/ac/b5/7eacb506f9a39bd5b2c4fc234fb91d94.png");
-      height:100%;
+      min-height:100%;
     }
     .intro-cap{
       display:flex;
@@ -191,24 +159,7 @@
     /*App Section*/
     #app{
       background-image:url("https://i.pinimg.com/originals/9d/16/79/9d16798b12696d382a630152e7baa56e.jpg");
-      height:100%;
-    }
-    
-    @media (max-width:960px){
-      #app{
-        width:9%;
-        display:flex;
-        justify-content: center;
-        height:100vh;
-      }
-    }
-    @media (max-width:500px){
-      #app{
-        width:70%;
-        display:flex;
-        justify-content: center;
-        height:100vh;
-      }
+      min-height:100%;
     }
     .app-img{
       padding-top:5vh;
