@@ -1,0 +1,151 @@
+<html>
+    <style>
+        body{
+            background-color: white;
+            margin-top:10vh;
+            
+        }
+        h1{
+            text-align:center;
+            font-family:arial;
+        }
+        .chart{
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+        }
+        .axis{
+            font:15px arial;
+        }
+        .axis path,
+        .axis line{
+            fill:none;
+            stroke:#D4D8DA;
+            stroke-width:1px;
+            shape-rendering:crispEdges;
+        }
+        .tooltip{
+            position: absolute;
+            display: none;
+            min-width:80px;
+            height:auto;
+            background:none repeat scroll 0 0 white;
+            border:1px solid #6F257F;
+            padding:14px;
+            text-align:center;
+        }
+    </style>
+    <body>
+        <h1>New Cases of Covid in Maryland <br> (Daily)</h1>
+        <select id="select">
+            <option value="default">Select State</option>
+        </select>
+        <svg class="chart" width="960" height="500"></svg>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            var select=document.getElementById("select"),
+                states=['AL-Alabama','AK-Alaska','AS-American Samoa','AZ-Arizona','AR-Arkansas','CA-California','CO-Colorado','CT-Connecticut','DE-Delaware','DC-District of Columbia','FL-Florida','GA-Georgia','GU-Guam','GU-Hawaii','ID-Idaho','IL-Illinois','IN-Indiana','IA-Iowa','KS-Kansas','KY-Kentucky','LA-Louisiana','ME-Maine','MD-Maryland','MA-Massachusetts','MI-Michigan','MN-Minnesota','MS-Mississippi','MO-Missouri','MT-Montana','NE-Nebraska','NV-Nevada','NH-New Hampshire','NJ-New Jersey','NM-New Mexico','NY-New York','NC-North Carolina','ND-North Dakota','MP-Northern Mariana Islands','OH-Ohio','OK-Oklahoma','OR-Oregon','PA-Pennsylvania','PR-Puerto Rico','RI-Rhode Island','SC-South Carolina','SD-South Dakota','TN-Tennessee','TX-Texas','UT-Utah','VT-Vermont','VI-Virgin Island','VA-Virginia','WA-Washington','WV-West Virginia','WI-Wisconsin','WV-Wyoming']
+            for (var i=0;i<states.length;i++){
+                var option=document.createElement("option"),
+                    txt=document.createTextNode(states[i]);
+                option.appendChild(txt);
+                option.setAttribute("value",states[i])
+                select.insertBefore(option,select.lastChild);
+            }
+            
+            
+            var abbrev;
+            d3.select("select")
+            .on("change",function(d){
+                var selected = d3.select("select").node().value;
+                d3.select("h1").text("Daily Covid Cases in "+selected.substring(3,));
+                var abbrev=selected.substring(0,2)
+                
+                
+            console.log(abbrev)
+        
+            //Import JSON Data from API
+            d3.json("https://api.covidtracking.com/v1/states/"+abbrev+"/daily.json",
+                function(error,data){
+                    data.reverse();
+                    
+                    //SVG size and margins
+                    var svg=d3.select("svg"),
+                        margin={top:20,right:20,bottom:30,left:50},
+                        width= +svg.attr("width")-margin.left-margin.right
+                        height=+svg.attr("height")-margin.top-margin.bottom;
+                    
+                    //Tooltip
+                    var tooltip=d3.select("body")
+                        .append("div")
+                        .attr("class","tooltip")
+
+                    var g=svg.append("g")
+                        .attr("transform", 
+                        "translate(" + margin.left+ ", " +margin.top+ ")");
+                    
+
+                    //Assigning Object Values to corresponging axes
+                    var x=d3.scaleBand().rangeRound([0, width]).padding(0.1).domain(data.map(function(d) { return d.date }));
+                    var y=d3.scaleLinear().rangeRound([height,0]).domain([0,d3.max(data,function(d){return d.positiveIncrease})]);
+                
+                    //Convert JSON Dates to Months for X axis
+                    var x1=d3.scaleTime()
+                        .domain(
+                            [new Date(
+                                Math.floor(data[0].date/10000), //Starting Year
+                                Math.floor(((data[0].date-((Math.floor(data[0].date/10000))*10000))/100))-1,//Starting Month
+                                +data[0].date.toString().split('').pop()),//Starting Day
+
+                            new Date(
+                                Math.floor(data[data.length-1].date/10000),//Current Year
+                                Math.floor(((data[data.length-1].date-((Math.floor(data[data.length-1].date/10000))*10000))/100))-1,//Current Month
+                                +data[data.length-1].date.toString().split('').pop()) ]) //Current Day
+
+                        .range([0, width]);
+
+                        //Create X-axis
+                        g.append("g")
+                            .attr("class","axis x-axis")
+                            .attr("transform","translate("+0+","+height+")")
+                            .call(d3.axisBottom(x1))
+            
+                        //Create Y-axis
+                        g.append("g")
+                            .attr("class","axis y-axis")
+                            .call(d3.axisLeft(y)
+                                .ticks(10)
+                                .tickFormat(function(d){return d}))
+                            .append("text")
+                                .attr("transform","rotate(-90)")
+                                .attr("y",6)
+                                .attr("dy","0.71em")
+                                .attr("text-anchor","end")
+                                .attr("fill","black")
+                                .text("New Daily Covid Cases");
+                        
+                        //Create Bars in bar graph
+                        g.selectAll(".bar")
+                            .data(data)
+                            .enter()
+                            .append("rect")
+                            .attr("x", function(d){return x(d.date)})
+                            .attr("y", function(d){return y(d.positiveIncrease)})
+                            .attr("width", x.bandwidth())
+                            .attr("height", function(d){return height-y(d.positiveIncrease)})
+                            .attr("fill","#6F257F")
+                            .on("mousemove", function(d){
+                                tooltip
+                                    .style("left", d3.event.pageX-50+"px")
+                                    .style("top",d3.event.pageY-70+"px")
+                                    .style("display","inline-block")
+                                    .html(d.date+"<br>"+(d.positiveIncrease));
+                            })
+                                    .on("mouseout", function(d){tooltip.style("display", "none");});
+                        
+                });
+                d3.selectAll("svg > *").remove();
+            });
+        </script>
+    </body>
+</html>
