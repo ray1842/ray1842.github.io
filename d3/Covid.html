@@ -137,12 +137,16 @@
                             .attr("fill","black")
                             .text("New Daily Covid Cases");
 
-                            g.append('text')
-                                .attr("x",width/2+150)
-                                .attr('y', height + 50)
-                                .text('More Information: https://covidtracking.com/')
-                                .attr('class', 'info')
-                                .style("font-family","arial");
+                        g.append('text')
+                            .attr('y', height + 50)
+                            .text("* GU,HI,MA,NJ, MP, PR,VI, VA, & WA chart scales need fixing")
+                            .attr('class', 'info')
+                            .style("font-family","arial");
+                        g.append('text')
+                            .attr('y', height + 75)
+                            .text("Data from The COVID Tracking Project. More Information: https://covidtracking.com/")
+                            .attr('class', 'info')
+                            .style("font-family","arial");
 
                         //Tooltip Month Label Logic        
                         var months=function(d){
