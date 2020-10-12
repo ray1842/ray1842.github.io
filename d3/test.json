@@ -1,14 +1,6 @@
 {
     "name": "Video Game Sales Data Top 100",
     "children": [{
-            "name": "2600",
-            "children": [{
-                "name": "Pac-Man",
-                "category": "2600",
-                "value": "7.81"
-            }]
-        },
-        {
             "name": "Wii",
             "children": [{
                     "name": "Wii Sports",
