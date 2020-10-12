@@ -1,64 +1,64 @@
 {
-    "name": "Hang Seng Index Constituents",
+    "name": "Video Game Sales Data Top 100",
     "children": [{
-            "name": "Financials",
+            "name": "Wii",
             "children": [{
                     "name":"Financials",
             "children":[{
                 "name":"Bank of China",
                 "category":"Financials",
-                "value":"2.42%"
+                "value":"2.42"
             },
             {
                 "name":"BankComm",
                 "category":"Financials",
-                "value":"0.43%"
+                "value":"0.43"
             },
             {
                 "name":"China Life Insurance",
                 "category":"Financials",
-                "value":"1.69%"
+                "value":"1.69"
             },
             {
                 "name":"BOC Hong Kong",
                 "category":"Financials",
-                "value":"0.98%"
+                "value":"0.98"
             },
             {
                 "name":"Ping An Insurance",
                 "category":"Financials",
-                "value":"5.91%"
+                "value":"5.91"
             
             },
             {
                 "name":"ICBC",
                 "category":"Financials",
-                "value":"3.85%"
+                "value":"3.85"
             },
             {
                 "name":"AIA Group",
                 "category":"Financials",
-                "value":"11.13%"
+                "value":"11.13"
             },
             {
                 "name":"China Construction Bank",
                 "category":"Financials",
-                "value":"7.13%"
+                "value":"7.13"
             },
             {
                 "name":"Hong Kong Exchange",
                 "category":"Financials",
-                "value":"5.63%"
+                "value":"5.63"
             }
             {
                 "name":"Hang Seng Bank",
                 "category":"Financials",
-                "value":"1.12%"
+                "value":"1.12"
             },
             {
                 "name":"HSBC Holdings",
                 "category":"Financials",
-                "value":"8.40%"
+                "value":"8.40"
             }
             ]
         },
@@ -67,17 +67,17 @@
             "children":[{
                 "name":"Sunny Optical",
                 "category":"Industrials",
-                "value":"0.98%"
+                "value":"0.98"
         },
         {
                 "name":"AAC Technologies",
                 "category":"Industrials",
-                "value":"0.39%"
+                "value":"0.39"
         },
         {
                 "name":"AAC Technologies",
                 "category":"Industrials",
-                "value":"0.39%"
+                "value":"0.39"
         }
             ]
         },
@@ -88,22 +88,22 @@
                 "children":[{
                         "name":"Mengniu Dairy",
                         "category":"Consumer Staples",
-                        "value":"1.26%"
+                        "value":"1.26"
                 },
                 {
                     "name":"Hengan International",
                     "category":"Consumer Staples",
-                    "value":"0.52%"
+                    "value":"0.52"
                 },
                 {
                     "name":"WH Group",
                     "category":"Consumer Staples",
-                    "value":"0.71%"
+                    "value":"0.71"
                 },
                 {
                     "name":"Want Want China",
                     "category":"Consumer Staples",
-                    "value":"0.36%"
+                    "value":"0.36"
                 }
             ]
         },
@@ -112,32 +112,32 @@
             "children":[{
                 "name":"Senzhou International",
                 "category":"Consumer Discretionary",
-                "value":"1.24%"
+                "value":"1.24"
         },
         {
                 "name":"Sands China LTD.",
                 "category":"Consumer Discretionary",
-                "value":"1.16%"
+                "value":"1.16"
         },
         {
                 "name":"Techtronic IND",
                 "category":"Consumer Discretionary",
-                "value":"1.73%"
+                "value":"1.73"
         },
         {
                 "name":"Geely Auto",
                 "category":"Consumer Discretionary",
-                "value":"1.09%"
+                "value":"1.09"
         },
         {
                 "name":"MTR Corp",
                 "category":"Consumer Discretionary",
-                "value":"0.75%"
+                "value":"0.75"
         },
         {
                 "name":"Galaxy Entertainment",
                 "category":"Consumer Discretionary",
-                "value":"1.59%"
+                "value":"1.59"
         }
             ]
         },
@@ -146,58 +146,58 @@
             "children":[{
                 "name":"Country Garden",
                 "category":"Properties & Construction",
-                "value":"0.88%"
+                "value":"0.88"
         },
         {
                 "name":"Wharf REIC",
                 "category":"Properties & Construction",
-                "value":"0.41%"
+                "value":"0.41"
         },
         {
                 "name":"CK Asset",
                 "category":"Properties & Construction",
-                "value":"1.31%"
+                "value":"1.31"
         },
         {
                 "name":"China Resources Land",
                 "category":"Properties & Construction",
-                "value":"1.38%"
+                "value":"1.38"
         },
         {
                 "name":"Link REIT",
                 "category":"Properties & Construction",
-                "value":"1.52%"
+                "value":"1.52"
         
         },
         {
                 "name":"China Overseas Land and Investment",
                 "category":"Properties & Construction",
-                "value":"1.03%"
+                "value":"1.03"
         },
         {
                 "name":"Hang Lung Property",
                 "category":"Properties & Construction",
-                "value":"0.53%"
+                "value":"0.53"
         },
         {
                 "name":"Sino Land",
                 "category":"Properties & Construction",
-                "value":"0.34%"
+                "value":"0.34"
         },
         {
                 "name":"New World Development",
                 "category":"Properties & Construction",
-                "value":"0.74%"
+                "value":"0.74"
         }
         {
                 "name":"Sun Hung Kai Property",
                 "category":"Properties & Construction",
-                "value":"1.45%"
+                "value":"1.45"
         },
         {
                 "name":"Henderson Land Development",
                 "category":"Properties & Construction",
-                "value":"0.53%"
+                "value":"0.53"
         }
             ]
         },
@@ -206,12 +206,12 @@
             "children":[{
                 "name":"Sino Biopharm",
                 "category":"Healthcare",
-                "value":"1.22%"
+                "value":"1.22"
         },
         {
                 "name":"CSPC Pharma",
                 "category":"Healthcare",
-                "value":"1.16%"
+                "value":"1.16"
         }
             ]
         },
@@ -221,22 +221,22 @@
             "children":[{
                 "name":"China Shenhua Energy",
                 "category":"Energy",
-                "value":"0.53%"
+                "value":"0.53"
         },
         {
                 "name":"China Nat'l Offshore Oil Corp ",
                 "category":"Energy",
-                "value":"1.89%"
+                "value":"1.89"
         },
         {
                 "name":"PetroChina",
                 "category":"Energy",
-                "value":"0.68%"
+                "value":"0.68"
         },
         {
                 "name":"Sinopec",
                 "category":"Energy",
-                "value":"1.04%"
+                "value":"1.04"
         }
             ]
         },
@@ -245,22 +245,22 @@
             "children":[{
                 "name":"CK Infrastructure Holdings",
                 "category":"Utilities",
-                "value":"0.33%"
+                "value":"0.33"
         },
         {
                 "name":"Power Assets ",
                 "category":"Utilities",
-                "value":"0.74%"
+                "value":"0.74"
         },
         {
                 "name":"HK & China Gas",
                 "category":"Utilities",
-                "value":"1.44%"
+                "value":"1.44"
         },
         {
                 "name":"CLP Group",
                 "category":"Utilities",
-                "value":"1.73%"
+                "value":"1.73"
         }
             ]
         },
@@ -269,12 +269,12 @@
             "children":[{
                 "name":"China Mobile",
                 "category":"Telecom",
-                "value":"3.99%"
+                "value":"3.99"
         },
         {
                 "name":"China Unicom ",
                 "category":"Telecom",
-                "value":"0.40%"
+                "value":"0.40"
         }
             ]
         },
@@ -283,17 +283,17 @@
             "children":[{
                 "name":"CITIC",
                 "category":"Conglomerates",
-                "value":"0.62%"
+                "value":"0.62"
         },
         {
                 "name":"Swire Pacific-A ",
                 "category":"Conglomerates",
-                "value":"0.25%"
+                "value":"0.25"
         },
         {
                 "name":"CK Hutchinson",
                 "category":"Conglomerates",
-                "value":"1.65%"
+                "value":"1.65"
         }]
         }
     ]
