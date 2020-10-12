@@ -1,81 +1,61 @@
 {
-    "name": "Video Game Sales Data Top 100",
+    "name": "Hang Seng Index Constituents",
     "children": [{
-            "name": "Wii",
+            "name": "Financials",
             "children": [{
-                    "name": "Wii Sports",
-                    "category": "Wii",
-                    "value": "82.53"
+                    "name": "Bank of China",
+                    "category": "Financials",
+                    "value": "2.42%"
                 },
                 {
-                    "name": "Mario Kart Wii",
-                    "category": "Wii",
-                    "value": "35.52"
+                    "name": "BankComm",
+                    "category": "Financials",
+                    "value": "0.43%"
                 },
                 {
-                    "name": "Wii Sports Resort",
-                    "category": "Wii",
-                    "value": "32.77"
+                    "name": "China Life Insurance",
+                    "category": "Financials",
+                    "value": "1.69%"
                 },
                 {
-                    "name": "Wii Play",
-                    "category": "Wii",
-                    "value": "28.92"
+                    "name": "BOC Hong Kong",
+                    "category": "Financials",
+                    "value": "0.98%"
                 },
                 {
-                    "name": "New Super Mario Bros. Wii",
-                    "category": "Wii",
-                    "value": "28.32"
+                    "name": "Ping An Insurance",
+                    "category": "Financials",
+                    "value": "5.91%"
                 },
                 {
-                    "name": "Wii Fit",
-                    "category": "Wii",
-                    "value": "22.7"
+                    "name": "ICBC",
+                    "category": "Financials",
+                    "value": "3.85%"
                 },
                 {
-                    "name": "Wii Fit Plus",
-                    "category": "Wii",
-                    "value": "21.79"
+                    "name": "AIA Group",
+                    "category": "Financials",
+                    "value": "11.13%"
                 },
                 {
-                    "name": "Super Smash Bros. Brawl",
-                    "category": "Wii",
-                    "value": "12.84"
+                    "name": "China Construction Bank",
+                    "category": "Financials",
+                    "value": "7.13%"
                 },
                 {
-                    "name": "Super Mario Galaxy",
-                    "category": "Wii",
-                    "value": "11.35"
+                    "name": "Hong Kong Exchange",
+                    "category": "Financials",
+                    "value": "5.63%"
                 },
                 {
-                    "name": "Just Dance 3",
-                    "category": "Wii",
-                    "value": "10.12"
+                    "name": "Hang Seng Bank",
+                    "category": "Financials",
+                    "value": "1.12%"
                 },
                 {
-                    "name": "Just Dance 2",
-                    "category": "Wii",
-                    "value": "9.44"
-                },
-                {
-                    "name": "Wii Party",
-                    "category": "Wii",
-                    "value": "8.38"
-                },
-                {
-                    "name": "Mario Party 8",
-                    "category": "Wii",
-                    "value": "8.27"
-                },
-                {
-                    "name": "Mario & Sonic at the Olympic Games",
-                    "category": "Wii",
-                    "value": "7.99"
-                },
-                {
-                    "name": "Super Mario Galaxy 2",
-                    "category": "Wii",
-                    "value": "7.51"
+                    "name": "HSBC Holdings",
+                    "category": "Financials",
+                    "value": "8.40%"
                 }
             ]
         },
@@ -468,7 +448,7 @@
                     "value": "9.16"
                 },
                 {
-                    "name": "Super Smash Bros. for Wii U and 3DS",
+                    "name": "Super Smash Bros. for Financials U and 3DS",
                     "category": "3DS",
                     "value": "7.55"
                 }
