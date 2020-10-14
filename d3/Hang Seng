@@ -1,0 +1,214 @@
+<html>
+    <style>
+        html,body{
+            min-height:100%;
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items: center;
+        }
+        svg{
+            background-color:whitesmoke;
+            font-size:15px;
+        }
+        #canvas{
+            min-width:1200px;
+            min-height:600px;
+            word-wrap: break;
+        }
+        #legend{
+            margin-top:2vh;
+        }
+        #tooltip {
+            position: absolute;
+            pointer-events: none;
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 4px;
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1 id="title">Hang Seng Index Constituents</h1>
+        <div id="description">Sorted by Sector and Weight</div>
+        <div id="tooltip"></div>
+        <svg id="canvas" width="1200" height="580"></svg>
+        <svg id="legend" width="480">
+            <g>
+                <rect class="legend-item" x="10" y="0" width="20" height="20" fill="red"></rect>
+                <text x="60" y="10">Financials</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="150" y="0"width="20" height="20" fill="blue"></rect>
+                <text x="200" y="10">Industrials</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="290" y="0" width="20" height="20" fill="pink"></rect>
+                <text x="340" y="10">Consumer Staples</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="10" y="40" width="20" height="20" fill="coral"></rect>
+                <text x="60" y="50">Consumer Discretionary</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="230" y="40" width="20" height="20" fill="#ac967f"></rect>
+                <text x="280" y="50">Properties & Construction</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="10" y="80" width="20" height="20" fill="green"></rect>
+                <text x="60" y="90">Healthcare</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="150" y="80" width="20" height="20" fill="#800020"></rect>
+                <text x="200" y="90">Energy</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="290" y="80" width="20" height="20" fill="gray"></rect>
+                <text x="340" y="90">Utilities</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="10" y="120" width="20" height="20" fill="aqua"></rect>
+                <text x="60" y="130">Telecom</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="150" y="120" width="20" height="20" fill="turqoise"></rect>
+                <text x="200" y="130">IT</text>
+            </g>
+            <g>
+                <rect class="legend-item" x="290" y="120" width="20" height="20" fill="navy"></rect>
+                <text x="340" y="130">Conglomerates</text>
+            </g>
+        </svg>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script>
+            
+            let constituentData;
+            let canvas=d3.select("#canvas")
+            const tooltip = d3.select("body")
+                      .append("div")
+                      .attr("id", "tooltip");
+            let drawTreeMap=()=>{
+                //Set up the tree structure
+                let hierarchy=d3.hierarchy(constituentData,(node)=>{
+                    //Set child node
+                    return node["children"]
+                    //Add value to each node using sum method, this method helps determine size of rects
+                }).sum((node)=>{
+                    //Set value node
+                    return node["value"]
+                }).sort((node1,node2)=>{
+                    //If negative node 1 sorted before node two, and vice versa if positive
+                    return node2["value"]-node1["value"]
+                })
+                //Create treemap
+                let createTreeMap=d3.treemap()
+                    .size([1200,600])
+                    
+                
+                //Add properties to each leaf node
+                createTreeMap(hierarchy)
+
+                let constituentTiles=hierarchy.leaves()
+                console.log(constituentTiles)
+
+                let block=canvas.selectAll("g")
+                    .data(constituentTiles)
+                    .enter()
+                    .append("g")
+                    .attr("transform", (company)=>"translate("+company["x0"]+","+company["y0"]+")")
+                    
+                block.append("rect")
+                    .attr("class","tile")
+                    .attr("stroke","black")
+                    .attr("fill",(company)=>{
+                        let category=company["data"]["category"]
+                        if (category=="Financials"){
+                            return "red"
+                        }else if (category=="Industrials"){
+                            return "blue"
+                        }else if (category=="Consumer Staples"){
+                            return "pink"
+                        }else if (category=="Consumer Discretionary"){
+                            return "coral"
+                        }else if (category=="Properties & Construction"){
+                            return "#ac967f"
+                        }else if (category=="Healthcare"){
+                            return "green"
+                        }else if (category=="Energy"){
+                            return "#800020"
+                        }else if (category=="Utilities"){
+                            return "gray"
+                        }else if (category=="Telecom"){
+                            return "aqua"
+                        }else if (category=="Information Technology"){
+                            return "turquoise"
+                        }else if (category=="Conglomerates"){
+                            return "navy"
+                        }
+                    })
+                    //Assign each tile a name property
+                    .attr("data-name",(company)=>{
+                        return company["data"]["name"]
+                    })
+                    //Assign each tile a category property
+                    .attr("data-category",(company)=>{
+                        return company["data"]["category"]
+                    })
+                    //Assign each tile a value property
+                    .attr("data-value",(company)=>{
+                        return company["data"]["value"]
+                    })
+                    .attr("width",(company)=>{
+                        return company["x1"]-company["x0"]
+                    })
+                    .attr("height",(company)=>{
+                        return company["y1"]-company["y0"]
+                    })
+                    .on("mousemove", (company)=> {
+                        tooltip.transition()
+                                .duration(200)
+                                .style("opacity", 0.75);
+                        tooltip.attr("data-value", company["data"]["value"]);
+                        tooltip.html(
+                            "Name: " + company["data"]["name"] + "<br>" +
+                            "Category: " + company["data"]["category"] + "<br>" +
+                            "Value: " + company["data"]["value"] + "%"
+                        )
+                            .style("top", `${d3.event.pageY + 10}px`)
+                            .style("left", `${d3.event.pageX + 8}px`);
+                        })
+                    .on("mouseout", (company) => {
+                        tooltip.transition()
+                                .duration(200)
+                                .style("opacity", 0);
+                        });
+
+                block.append("text")
+                    .selectAll("tspan")
+                    .data((company) => company["data"]["name"].split(/(?=[A-Z][^A-Z])/g))
+                    .enter()
+                    .append("tspan")
+                    .attr("x", 4)
+                    .attr("y", (d, i) => 20 + 15*i)
+                    .text(d => d)
+                    .attr("fill","#fff")
+                    .attr("word-wrap","break")
+            }
+            d3.json("https://ray1842.github.io/d3/HangSengConstituents.json",
+                function(error,data){
+                    if(error){
+                        console.log(error)
+                    }
+                    else{
+                        constituentData=data;
+                        console.log(constituentData)
+                        drawTreeMap()
+                    }
+                });
+        </script>
+    </body>    
+</html>
