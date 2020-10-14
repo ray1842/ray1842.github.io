@@ -74,25 +74,25 @@
             ]
         },
         {
-            "name": "Consumer Stapes",
+            "name": "Consumer Staples",
             "children": [{
                     "name": "Mengniu Dairy",
-                    "category": "Consumer Stapes",
+                    "category": "Consumer Staples",
                     "value": "1.26%"
                 },
                 {
                     "name": "Hengnan International",
-                    "category": "Consumer Stapes",
+                    "category": "Consumer Staples",
                     "value": "0.52%"
                 },
                 {
                     "name": "WH Group",
-                    "category": "Consumer Stapes",
+                    "category": "Consumer Staples",
                     "value": "0.71%"
                 },
                 {
                     "name": "Want Want China",
-                    "category": "Consumer Stapes",
+                    "category": "Consumer Staples",
                     "value": "0.36%"
                 }
             ]
