@@ -1,0 +1,320 @@
+<html>
+<title>Apple Music - Apple</title>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+    <script> $(document).ready(function(){
+        $(window).on("load",function(){
+            $(window).scroll(function(){
+                var windowBottom=$(this).scrollTop()+$(this).innerHeight();
+                $(".fadeline").each(function(){
+                    var objectBottom=$(this).offset().top+$(this).outerHeight();
+                    if(objectBottom<windowBottom){
+                        if($(this).css("opacity")==0){$(this).fadeTo(500,1);}
+                    }else{
+                        if($(this).css("opacity")==1){$(this).fadeTo(500,0);}
+                    }
+                });
+                $("#btn-fade").each(function(){
+                    var objectBottom=$(this).offset().top+$(this).outerHeight();
+                    if(objectBottom<windowBottom){
+                        if($(this).css("opacity")==0){$(this).fadeTo(500,1);}
+                    }else{
+                        if($(this).css("opacity")==1){$(this).fadeTo(500,0);}
+                    }
+                });
+                $("bodyrow3_heading").each(function(){
+                    var objectBottom=$(this).offset().top+$(this).outerHeight();
+                    if(objectBottom<windowBottom){
+                        if($(this).css("opacity")==0){$(this).slideUp(500,1);}
+                    }else{
+                        if($(this).css("opacity")==1){$(this).slideDown(500,0);}
+                    }
+                });
+            }).scroll();
+        });
+
+});</script>
+
+    
+</head>
+<style>
+     body,html{
+        font-family: 'Roboto', sans-serif; 
+        background-color:white; 
+        max-width:99vw; 
+        display:grid; 
+        font-size:64px; 
+        font-weight:700;
+    }
+    .bodyrow1{
+        grid-row:1; 
+        background-color:rgb(255,255,255); 
+        height:210vh;
+    }
+    .itunes-logo{
+        width:100px;
+         margin-top:5vh;
+    }
+    .Try_it_Free_link{
+        text-decoration:none;
+    }
+    .Try_it_Free_btn{
+        margin-bottom:5vh; 
+        color:white;
+        font-weight:600; 
+        background-color: #ff2f56; 
+        border-color:#ff2f56; 
+        border-radius:15px;
+        width:15vw;
+    }
+    .appleMusic_Availability_Black{
+        font-size:0.1875rem; 
+        padding-bottom:5vh;
+        text-align:center
+    }
+    .img-row1{
+        height:40vh;
+    }
+    .bodyrow2{
+        grid-row:2; 
+        background-image: linear-gradient(to top left, cyan, rgb(255,0,255)); 
+        font-size:0.875rem; 
+        font-weight:700;
+    }
+    .fadeline{
+        text-align: center; 
+        opacity:0; 
+        color:white; 
+        font-size:0.5rem; 
+        padding-top:5vh;
+    }
+    #line1{
+        color:white; 
+        padding-top:33vh;
+    }
+    #line2{
+        color:white;
+    }
+    #line6{
+        margin-bottom:5vh;
+    }
+    .appleMusic_Availability_White{
+        color:white;
+        padding-bottom:33vh;
+        font-size:0.1875rem;
+        font-weight:300;
+        text-align:center;
+    }
+    .bodyrow3{
+        grid-row:3; 
+        background-color:white; 
+        color:black; 
+        font-size:0.875rem; 
+        justify-self: center; 
+        height:693vh; 
+        font-weight:700;
+    }
+    #bodyrow3_heading{
+        padding-top:20vh; 
+        padding-bottom:10vh;
+    }
+    div.sticky {
+        position: sticky; 
+        top: 15vh; 
+        width:50vw; 
+        height:75vh; 
+        text-align:center; 
+        border-radius:15px; 
+        color:white;
+    }
+    .card_text{
+        font-size:0.4375rem; 
+        padding-top:7.5vh;
+    }
+    #card1{
+        background:linear-gradient(-40deg, #d754ad 0%, #f96785 67%, #fe7333 100%); 
+        color:white; 
+        margin-bottom: 15vh;
+    }
+    .new-bubble-text{
+        font-size:0.1875rem; 
+        padding-top:5vh;
+    }
+    .new-bubble{
+        width:3vw; 
+        height:3.5vh; 
+        font-size: 0.1875rem; 
+        background-color: transparent; 
+        border: 1px solid white; 
+        border-radius: 15px;
+         margin:-2.75vh auto auto auto;
+    }
+    .new-heading{
+        font-size:0.4375rem;
+    }
+    .replayGif{
+        font-size:0.1875rem; 
+        padding-top:1vh; 
+        padding-bottom:2vh;
+    }
+    #appleMusic_gif{
+        height:51.3vh; 
+        width:15vw
+    }
+    #appleMusic_radio{
+        height:56.5vh;
+        width:15vw; 
+        background:transparent; 
+        padding-top:5vh;
+    }
+    #card3{
+        background:linear-gradient(-40deg, #d152b8 0%, #d152b8 60%, #d152b8 100%); 
+        margin-bottom: 15vh;
+    }
+    #apple_watch{
+        height:50vh; 
+        width:40vw;
+    }
+    #card4{
+        background:linear-gradient(-40deg, #6c6ff0 0%, #a354e4 58%, #c65cae 100%); 
+        margin-bottom: 15vh;
+    }
+    #apple_carplay{
+        width:50vw; 
+        height:57vh; 
+        border-bottom-right-radius: 15px; 
+        border-bottom-left-radius: 15px; 
+        padding-top:10vh;
+    }
+    #card5{
+        background:linear-gradient(-40deg, #56acef 0%, #6c6ff0 50%, #9755e7 100%); 
+        margin-bottom: 15vh;
+    }
+    #appleMusic_foryou{
+        height:57.5vh; 
+        width:25vw; 
+        padding-top:5vh;
+    }
+    #card6{
+        background:linear-gradient(-40deg, #9adee6 0%, #00a9ff 25%, #3663cc 100%); 
+        margin-bottom: 15vh;
+    }
+    #appleMusic_curated{
+        height:50vh; 
+        width:30vw; 
+        padding-top:5vh;
+    }
+    #card7{
+        background:linear-gradient(-40deg, #69e7e3 0%, #14bcf3 60%, #1eb4e5 100%); 
+        margin-bottom: 15vh;
+    }
+    #appleMusic_home{
+        height:50vh; 
+        width:30vw; 
+        padding-top:5vh;
+    }
+    #learn_more{
+        font-size:0.333rem; 
+        font-weight:300; 
+        color:#06c"
+    }
+</style>
+<body>
+    <div class="bodyrow1">
+        <img class="center-block itunes-logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/ITunes_12.2_logo.png">
+
+        <div class="text-center">Lose yourself in<br> 60 million songs</div>
+        <a class="Try_it_Free_link" href="https://music.apple.com/subscribe?app=music&at=1000l4QJ&ct=402&itscg=10000&itsct=402x">
+        <button class="btn center-block Try_it_Free_btn">
+            Try it free</button></a>
+        <div class="appleMusic_Availability_Black">Apple Music is available in iTunes, and for iOS and Android devices.</div>
+            <div class="col-md-4">
+                <img class="img-responsive img-row1"  style="padding-left:5vw; width:60vw; height:50vh;"
+                src="https://github.com/ray1842/Website-clones/blob/master/Assets/ios11-homepod-siri-colored-swirling-light-animation.gif?raw=true">
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-row1" style="padding-left:7.5vw;width:22.5vw;height:50vh;"
+                src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applemusic/ios13-iphone-xs-music-now-playing-lyrics-synced-animation.gif">
+            </div>
+            <div class="col-md-5">
+                <img class="img-responsive img-row1" style=" width:50vw;height:150vh;"
+                src="https://github.com/ray1842/Website-clones/blob/master/Assets/ipad_bodyrow1.png?raw=true">
+            </div>
+            <div>
+                <img style="margin-top:-100vh;width:65vw;height:105vh;margin-left:-1vw;"
+                src="https://github.com/ray1842/Website-clones/blob/master/Assets/macbook.png?raw=true">
+            </div>
+    </div><br>
+    <div class="bodyrow2">
+        <div class="text-center" id="line1">It hits all the</div>
+        <div class="text-center" id="line2">right notes.</div>
+        <div class="fadeline" id="line3">Stream 60 million songs ad-free.</div>
+        <div class="fadeline" id="line4">Download your favorite tracks. Play them offline.</div>
+        <div class="fadeline" id="line5">Get exclusive and original content.</div>
+        <div class="fadeline" id="line6">Listen accross all of your devises.</div>
+        <a class="Try_it_Free_link" href="https://music.apple.com/subscribe?app=music&at=1000l4QJ&ct=402&itscg=10000&itsct=402x">
+            <button class="btn center-block Try_it_Free_btn" id="btn-fade">
+                Try it free</button></a>
+        <div class="appleMusic_Availability_White">Apple Music is available in iTunes, and for iOS and Android devices.</div>
+    </div>
+    <div class="bodyrow3">
+        <div class="text-center" id="bodyrow3_heading">It's as easy<br>as it sounds.</div>
+        <div class="sticky" id="card1">
+            <div class="new-bubble-text">New<div class="new-bubble"></div></div>
+            <div class="new-heading">Sing along, tap ahead, or just<br>listen with lyrics view.</div>
+            <div class="replayGif">Replay <i class="fa fa-repeat"aria-hidden="true"></i></div>
+            <img id="appleMusic_gif"
+            src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/applemusic/ios13-iphone-xs-music-now-playing-lyrics-synced-animation.gif">
+        </div>
+        <div class="sticky" id="card2" style="background:linear-gradient(-40deg, #af4fec 0%, #d753ad 70%, #eb6078 100%); margin-bottom: 15vh;">
+            <div class="new-bubble-text">New<div class="new-bubble"></div></div>
+            <div class="new-heading">Listen live to local radio stations<br>from around the world.</div>
+            <img id="appleMusic_radio"
+            src="https://github.com/ray1842/Website-clones/blob/master/Assets/iphone%20radio.png?raw=true">
+        </div>
+        <div class="sticky" id="card3" >
+            <div class="card_text">
+                Download and steam music <br>straigth to your Apple Watch when <br>you're away from your iPhone.
+            </div>
+            <img id="apple_watch"
+            src="https://github.com/ray1842/Website-clones/blob/master/Assets/apple_watch.png?raw=true">
+        </div>
+        <div class="sticky" id="card4">
+            <div class="card_text">
+                Enjoy your Apple Music experience <br>in the car with CarPlay.
+            </div>
+            <img  id="apple_carplay"
+            src="https://9to5mac.com/wp-content/uploads/sites/6/2018/03/apple-music-carplay.jpg?quality=82&strip=all">
+        </div>
+        <div class="sticky" id="card5">
+            <div class="card_text">
+                Discover Songs you'll love from <br>music picked just for you.
+            </div>
+            <img  id="appleMusic_foryou"
+            src="https://github.com/ray1842/Website-clones/blob/master/Assets/applemusic_foryou.png?raw=true">
+        </div>
+        <div class="sticky" id="card6">
+            <div class="card_text">
+                Tap into new music with curated <br>playlists from out editors.
+            </div>
+            <img  id="appleMusic_curated"
+            src="https://2672686a4cf38e8c2458-2712e00ea34e3076747650c92426bbb5.ssl.cf1.rackcdn.com/2019-08-23-09-11-04.png">
+        </div>
+        <div class="sticky" id="card7">
+            <div class="card_text">
+                Ask Siri to search for songs. <br>Even by lyrics.
+            </div>
+            <img  id="appleMusic_home"
+            src="https://github.com/ray1842/Website-clones/blob/master/Assets/ios11-homepod-siri-colored-swirling-light-animation.gif?raw=true">
+        </div>
+        <a href="https://www.apple.com/apple-music/features/">
+            <div class="text-primary text-center" id="learn_more">Learn more about Apple Music features ></div>
+        </a>
+    </div>
+</body>
+</html>
