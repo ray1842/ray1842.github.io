@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&family=Roboto+Condensed:wght@700&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <title>Why China’s hip-hop stars are staying silent on Black Lives Matter </title>
+    <style>
+        body, html{
+            margin:0;
+            left:0;
+            max-width:100%;
+            display:grid;
+            grid-template-rows: 100vh 5vh 100vh;
+            font-size:14pt;
+        }
+        @media (max-width:1200px){
+        body,html{
+            font-size:50%;
+        }
+        }
+        @media (max-width:960px){
+        body,html{
+            font-size:48%;
+        }
+        }
+        @media (max-width:460px){
+        body,html{
+            font-size:45%;
+        }
+        }
+        /*Title section*/
+        #header{
+            grid-row:1;
+            background-image:url("https://mmva.muchmusic.com/wp-content/uploads/2018/08/KrisWuChineseSoul.jpg");
+            height:100vh;
+            width:100vw;
+            max-width:99vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Overpass', sans-serif;
+            color:white;
+        }
+        /*Inkstone Logo*/
+        #logo{
+            width:10vw;
+            height:auto;
+            padding:7vh 0vw 0vh 3vw;
+        }
+        /*Article Title*/
+        #article-title{
+            font-size:2.28rem;
+            padding:2.5vh 0vw 0vh 7.5vw;
+        }
+        /*Website Section*/
+        #topic{
+            font-family: 'Roboto', sans-serif;
+            font-size:0.9rem;
+            padding:37vh 0vw 0vh 7.5vw;
+        }
+        /*Heading Photo Credit*/
+        #photo-credit{
+            font-family: 'Roboto', sans-serif;
+            font-size:10pt;
+            font-style: italic;
+            font-weight:bold;
+            padding: 10vh 0vw 0vh 77vw;
+        }
+        /*Author's Name and Artcle Likes*/
+        #author-container{
+            grid-row:2;
+            padding-top:2vh;
+        }
+        .bold-text{
+            font-size:1.1rem;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .thin-text{
+            font-size:1.1rem;
+            font-family: 'Roboto', sans-serif;
+        }
+        /*Vertical line separating Author and number of likes*/
+        .v1{
+            border-left: 1px solid black; 
+            margin-left:60vw; 
+            height:5px;
+        }
+        /*Sidebar and Article Section*/
+        #bottom-section{
+            grid-row:3;
+            padding-top:5vh;
+            display:grid;
+            grid-template-columns: 25vw 67.5vw;
+        }
+        /*Sidebar*/
+        #sidebar{
+            background-position: relative;
+            background-attachment: fixed;
+            grid-column:1;
+            margin-left:7.5vw;
+        }
+        /*Podcast Links Container*/
+        .media-links-container{
+            display:flex;
+            flex-direction: row;
+            width:auto;
+            height:5vh;
+            padding-top:2vh;
+        }
+        /*Podcast Links*/
+        .media-links{
+            color:rgb(48,179,206);
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size:0.9rem;
+            text-decoration: none;
+        }
+        /*Podcast Links Hover Effects*/
+        .media-links:hover{
+            text-decoration: underline;
+        }
+        /*Vertical lines between podcast links*/
+        .v2{
+            padding-top:2vh;
+            border-left: 1px solid black; 
+            margin-left:2vw; 
+        }
+        /*Podcast platform logo container*/
+        .podcast-logo-container{
+            display:flex;
+            flex-direction: row;
+            padding-top:2vh;
+            width:auto;
+            height:5vh;
+        }
+        /*Links to podcast platforms*/
+        .podcast-logo{
+            width:25px;
+            height:auto;
+        }
+        /*Container for email form*/
+        #subscribe-container{
+            display:flex;
+            flex-direction: row;
+            padding-top:2vh;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        /*Email*/
+        #email{
+            font-family: 'Roboto', sans-serif;
+            font-size:1rem;
+            width:20vw;
+            height:5vh;
+            border-radius: 20px;
+            border-width: 1px;
+            border-color: black;
+            padding-left:1vw;
+        }
+        /*Email submit button*/
+        #submit{
+            font-family: 'Roboto', sans-serif;
+            width:5vw;
+            height:4.5vh;
+            border-radius: 20px;
+            border-width: 1px;
+            border-color: rgb(48,179,206);
+            background-color: rgb(48,179,206);
+            color:black;
+        }
+        #email-container {
+            padding-top:2vh;
+        }
+        /*Submit button placement*/
+        #button{
+            position: relative;
+            margin-top:-5vh;
+            margin-left:15.9vw;
+        }
+        /*Related Stories Bar*/
+        div.sticky{
+            position:-webkit-sticky;
+            position:sticky;
+            display:flex;
+            flex-direction: column;
+            top:20vh;
+            padding-top:20vh;
+        }
+        .related-story-section{
+            font-family: 'Roboto Condensed',sans-serif;
+            color: darkcyan;
+            font-size:0.8rem;
+            margin-top:-14vh;
+            margin-left:7.5vw;
+        }
+        .related-story-img{
+            width:100px;
+            height:100px;
+        }
+        .related-story-title{
+            font-family:'Roboto Condensed',sans-serif;
+            font-size:0.8rem;
+            margin-left:7.5vw;
+        }
+        .related-story-link{
+            text-decoration:none;
+            color:black;
+        }
+        a.related-story-link:hover{
+            text-decoration: underline;
+        }
+        /*Main Section*/
+        main{
+            grid-column:2;
+        }
+        /*Article Section*/
+        article{
+            align-content: center;
+            font-size:1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color:black;
+        }
+        section{
+            padding-left:10.5vw;
+
+        }
+        /*Any links to enternal articles*/
+        .article_links{
+            color:aqua;
+            font-family:'Roboto Condensed', sans-serif;
+        }
+        /*Images within the article*/
+        .article_images{
+            width:56vw;
+        }
+        /*Images' caption*/
+        .image_captions{
+            padding-top:1vh;
+            font-weight:800;
+            font-size:0.7rem;
+            font-style:italic;
+        }
+        /*Quote Infographic*/
+        .quote-graphic-container{
+            display:grid;
+            grid-template-columns: 15vw 50vw;
+            padding-left: 3vw;
+        }
+        /*Quotemark container*/
+        .quotemarks{
+            grid-column:1;
+            height:40vh;
+            background-color:white;
+        }
+        .quote_shapes{
+            columns:1;
+        }
+        /*Left Quote*/
+        .quote_square1{
+            display:inline-block;
+            width:90px;
+            height:90px;
+            background-color:black;
+        }
+        .quote_triangle1{
+            display:inline-block;
+            width: 0;
+            height: 0;
+            border-top: 30px solid black;
+            border-right: 30px solid transparent;
+            margin-left:60px;
+            margin-top:-20px;
+        }
+        /*Right Quote*/
+        .quote_square2{
+            display:inline-block;
+            margin-left:1vw;
+            width:90px;
+            height:90px;
+            background-color:aqua;
+        }
+        .quote_triangle2{
+            display:inline-block;
+            width: 0;
+            height: 0;
+            border-top: 30px solid aqua;
+            border-right: 30px solid transparent;
+            margin-left:75px;
+            margin-top:-5px;
+        }
+        /*Quote text & authors*/
+        .quotetext{
+            grid-column:2;
+            height:40vh;
+        }
+        .quotation{
+            font-size:2.25rem;
+            font-family:'Roboto Condensed',sans-serif;
+        }
+        .quote_author{
+            font-style: italic; 
+            padding-top:5vh;   
+        }
+        /*Footer*/
+        footer{
+            padding-left:10.5vw;
+            display:grid;
+            grid-template-columns: 1vw 35vw;
+            margin-top:5vh;
+            margin-bottom:10vh;
+        }
+        /*Footer vertical line*/
+        .v3{
+            grid-column:1;
+            border-left: 3.75px solid black; 
+            height:15vh;
+        }
+        #footer-info{
+            grid-column:2;
+            display:grid;
+            grid-template-rows: 7.5vh 7.5vh;
+        }
+        /*Pic of author and their name in footer*/
+        #pic-name{
+            grid-row:1;
+            align-items: start;
+        }
+        /*Author description in the footer*/
+        #description{
+            grid-row:2;
+            margin-top:1vh;
+            font-family: 'Roboto Condensed',sans-serif;
+            font-size:0.7rem;
+        }
+        @media (max-width:1200px){
+        img, iframe, .quotemarks,.quote_shapes,.quote_square1,.quote_triangle1,.quote_square2,.quote_triangle2{
+            width:50%;
+            height:50%;
+        }
+        }
+        @media (max-width:960px){
+        img,iframe,.quotemarks,.quote_shapes,.quote_square1,.quote_triangle1,.quote_square2,.quote_triangle2{
+            width:48%;
+            height:40%;
+        }
+        }
+        @media (max-width:460px){
+        img,iframe,.quotemarks,.quote_shapes,.quote_square1,.quote_triangle1,.quote_square2,.quote_triangle2{
+            width:45%;
+            height:45%;
+        }
+        }
+    </style>
+    <body>
+        <!--Title section-->
+        <div id="header">
+            <a href="https://www.inkstonenews.com/">
+                <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Inkstone_News_logo.svg/800px-Inkstone_News_logo.svg.png" alt="Inkstone Logo">
+            </a>
+            <div id="topic">ARTS </div><hr style="width:5vw; margin-left:7.5vw;">  
+            <div id="article-title">Why China’s hip-hop stars <br> are staying silent on Black <br> Lives Matter <br> 
+                <a target="_blank" href="https://www.inkstonenews.com/arts/why-chinas-hip-hop-stars-are-staying-silent-black-lives-matter/article/3089730" style="text-decoration: none;">
+                    (Link to Original Inkstone Article)
+                </a></div>
+            <div id="photo-credit">Photo:Reuters/Stringer</div>
+        </div>
+        <!--Author and Likes Section-->
+        <div id="author-container">
+            <span class="thin-text" style="padding-left:7.5vw;">by</span> <span class="bold-text">Viola Zhou</span><span class="v1"></span>
+            <span class="bold-text" style="padding-left:7.5vw;">19K </span><span class="thin-text">SHARES</span><hr style="margin-left:7.5vw; width:83.5vw;">
+        </div>
+        <div id="bottom-section">
+        <!--Podcast Section-->
+        <div id="sidebar">
+            <!--Audio Player-->
+            <iframe style="border: solid 1px #dedede; border-radius:15px;"  
+            src="https://app.stitcher.com/splayer/f/374865/71740231" 
+            height="90" frameborder="0" scrolling="no">
+            </iframe>
+            <!--Podcast Links-->
+            <div class="media-links-container">
+                <a class="media-links" href="https://assistant.google.com/services/invoke/uid/000000d0784f8a3f" target="_blank">
+                    Google <br> Assistant</a><span class="v2"></span>
+                <a class="media-links" href="https://skills-store.amazon.com/deeplink/dp/B07NYCPF5R?deviceType=app&share&refSuffix=ss_copy" target="_blank"
+                style="padding-left:2vw;">Amazon <br> Alexa</a><span class="v2"></span>
+                <span style="font-family:'Roboto Condensed',sans-serif; font-size:0.9rem; color:black; padding-left:1.5vw;">Podcast</span>
+            </div>
+            <div class="podcast-logo-container">
+                <a href="https://itunes.apple.com/hk/podcast/inkstone/id1455439572?l=en&mt=2" target="_blank">
+                    <img class="podcast-logo" src="https://www.inkstonenews.com/static/iTunes.png" alt="iTunes logo">
+                </a>
+                <a href="https://open.spotify.com/show/0A9vjcp9W5Lk9WqjQck0Tc?si=cy4dI5KhTYSuwKL9J_r3ag" target="_blank">
+                    <img class="podcast-logo" style="padding-left:2.5vw;" src="https://www.inkstonenews.com/static/Spotify.png" alt="Spotify logo">
+                </a>
+                <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9jbXMuc2NtcC5jb20vcnNzL3BvZGNhc3QvMzI0ODYwL21lZGlhX3Jzcy54bWw" target="_blank">
+                    <img class="podcast-logo" style="padding-left:2.5vw;" src="https://www.inkstonenews.com/static/GooglePodcast.png" alt="Google Podcast logo">
+                </a>
+                <a href="https://overcast.fm/itunes1455439572" target="_blank">
+                    <img class="podcast-logo" style="padding-left:2.5vw;" src="https://www.inkstonenews.com/static/Overcast.png" alt="Overcast" logo">
+                </a>
+                <a href="https://www.stitcher.com/podcast/south-china-morning-post/inkstone" target="_blank">
+                    <img class="podcast-logo" style="padding-left:2.5vw;" src="https://www.inkstonenews.com/static/Stitcher_white.png" alt="Stitcher logo">
+                </a>
+            </div>
+            <!--Subscribe Field & Button-->
+            <div id="subscribe-container">
+                Get the Inkstone Newsletter
+            </div>
+            <div style="padding-top:2vh; font-family: 'Roboto', sans-serif; font-size:0.9rem;">
+                Inkstone is a digest of China-focused stories providing unvarnished insight into a rising superpower.
+            </div>
+            <form id="form" action="https://www.inkstonenews.com/tech/inkstone-explains-how-china-engineers-alternative-internet-its-people/article/3088426">
+                <div id="email-container">
+                <input id="email" name="email" type="email" required placeholder="enter email">
+                    <div id="button">
+                        <input id="submit" name="submit" type="submit" required placeholder="Sign Up">
+                    </div>
+                </div>
+            </form><br>
+            <span style="font-family:'Roboto',sans-serif; font-size:8pt;">By registering you must agree to our 
+                <a href="https://www.inkstonenews.com/terms-conditions">T&Cs</a></span>
+            <div class="sticky">
+                    <!--Related Story Image 1-->
+                    <span style="font-family:'Roboto Condensed',sans-serif;font-size:1.1rem;">More on <a class="media-links" style="font-size: 1.1rem;" 
+                    href="https://www.inkstonenews.com/topics/racism">
+                    Racism and prejudice</a></span><br>
+                    <img class="related-story-img" src="http://i.dailymail.co.uk/i/pix/2016/07/09/18/3615D53C00000578-3682427-image-m-27_1468087089219.jpg" alt="Related Story Image 1">
+                    <br><br><span class="related-story-section">SOCIETY</span>
+                    <span class="related-story-title">
+                        <a class="related-story-link" href="https://www.inkstonenews.com/society/navigating-her-heritage-woman-finds-racism-both-america-and-china/article/3089059"> 
+                            Navigating her heritage, woman finds racism in both America and China
+                        </a>
+                    </span><br><br>
+                    <!--Related Story Image 2-->
+                    <img class="related-story-img" src="https://cdn.theculturetrip.com/wp-content/uploads/2017/11/shutterstock_289814918-2-650x434.jpg" alt="Related Story Image 1">
+                    <br><br><span class="related-story-section">SOCIETY</span>
+                    <span class="related-story-title">
+                        <a class="related-story-link" href="https://www.inkstonenews.com/society/suspect-bus-attack-asian-women-wearing-face-masks-dies-overdose/article/3084399"> 
+                            Suspect in bus attack on Asian women wearing face masks ‘dies of overdose’
+                        </a>
+                    </span><br><br>
+                    <!--Related Story Image 3-->
+                    <img class="related-story-img" src="https://th.bing.com/th/id/OIP.1UUsghz_LoBaz_OCTZXDyQHaE8?pid=Api&rs=1" alt="Related Story Image 1">
+                    <br><br><span class="related-story-section">SOCIETY</span>
+                    <span class="related-story-title">
+                        <a class="related-story-link" href="https://www.inkstonenews.com/society/attacked-nurse-it-happened-because-im-asian-and-wearing-mask/article/3084157"> 
+                            Attacked nurse: ‘It happened because I’m Asian and wearing a mask’
+                        </a>
+                    </span>
+
+            
+            </div>
+        </div>
+        <!--Article Section-->
+            <main>
+                <article>
+                    <section id="subheading">
+                        <p id="article_quote" style="font-weight:bold;">The silence on the Black Lives Matter movement among China’s hip-hop community highlights how the 
+                        genre has been embraced by Chinese yet cut off from its African-American roots.</p>
+                        <hr style="margin-left:0vw;width:55vw;">
+                    </section>
+                    <!--Article Section 1-->
+                    <section id="section_1">
+                        <p>After a 2017 rap show got a generation of China’s youth hooked on hip hop, the musical genre has created
+                        dozens of Chinese stars and, along with them, billions of streaming views.</p>
+
+                        <p>But despite their enthusiasm for a culture that originated in the African-American community, Chinese hip-
+                        hop stars and their legions of fans have largely stayed silent on the Black Lives Matter movement, which
+                        has swept across the world after the police killing of George Floyd, an unarmed black man, in Minneapolis.</p>
+
+                        <p>Canadian-Chinese hip-hop star Kris Wu has made no comments on the anti-racism protests to his 50.9
+                        million social media followers on Weibo and 7.3 million on Instagram. GAI, a rapping competition winner
+                        who has 8.8 million Weibo followers, has also kept quiet.</p>
+
+                        <p>Some others, including Higher Brothers, Vava and Hong Kong pop stars Jackson Wang and Edison Chen,
+                        have voiced against racism – but only on Instagram or Twitter, which are blocked in China. On Weibo, it is
+                        business as usual; they posted their own portraits, new songs and sneakers.</p>
+
+                        <p>Sun Bayi, a Beijing-based rapper, said he was not in a position to comment on the Black Lives
+                        Matter movement.</p>
+
+                        <p>“I know racism in theory, but it’s hard to empathize with it,” said the rapper, whose favorite artists are
+                        Eminem and the Notorious B.I.G. “I’m not black. I have never lived in America. What can I say about it?”</p>
+                    </section><br>
+                    <!--Article Section 2-->
+                    <section id="section_2">
+                        <!--Tweet-->
+                        <div id="tweet">
+                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Racism is ridiculous.I truly believe no one is born hating. <br>
+                            Those who have hated, must have learnt to hate.<br>And if anyone can learn to hate , then anyone can learn to love.<br>Let’s fight racism together.
+                            <a href="https://twitter.com/hashtag/blacklivesmatter?src=hash&amp;ref_src=twsrc%5Etfw">#blacklivesmatter</a> 
+                            <a href="https://twitter.com/hashtag/letsfightracism?src=hash&amp;ref_src=twsrc%5Etfw">#letsfightracism</a> 
+                            <a href="https://t.co/Q3t2gQk8rJ">pic.twitter.com/Q3t2gQk8rJ</a></p>&mdash; Jackson Wang 王嘉爾 왕잭슨 (@JacksonWang852) 
+                            <a href="https://twitter.com/JacksonWang852/status/1269647196397334528?ref_src=twsrc%5Etfw">June 7, 2020</a>
+                            </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div><br>
+                        
+                    
+                        <p>The silence in the Chinese-speaking hip-hop circle stands in sharp contrast with the outpouring of support
+                        from black and non-black artists elsewhere. From Kanye West to Lil Baby, A-list celebrities are attending
+                        rallies, writing protest songs and pledging massive donations toward anti-racism causes. Even the K-pop
+                        supergroup BTS has donated $1 million to the movement.</p>
+
+                        <p>The divide underscores how hip hop can achieve huge commercial success in China while being cut off
+                        from its black roots by cultural and political forces – a disconnect that is drawing criticism from within and
+                        outside the music community.</p>
+
+                        <p>Hip hop originated in the Bronx, New York in the 1970s as a form of expression for black youth, who often
+                        highlighted their experience with racism, violence and poverty. It began to flourish in China’s underground
+                        music scene in the 1990s.</p>
+
+                        <p>In the following decades, despite its notable influence on Chinese pop music (Jay Chou, a Taiwanese
+                        superstar, is known for incorporating hip hop into Mando-pop), it 
+                        <a class="article_links"
+                        href="https://www.inkstonenews.com/society/hip-hop-reality-show-rap-china-makes-comeback-chinese-stage/article/2156141" target="_blank">
+                        struggled with censorship and
+                        recognition</a> in a society that associated the music with violence and decadence.</p>
+                    </section>
+                    <!--Article Section 3-->
+                    <section id="section_3">
+                        <!--Article Image 1-->
+                        <div id="article_img1">
+                            <img class="article_images" 
+                            src="http://chinafilminsider.com/wp-content/uploads/2017/12/287dfd9e-d4aa-11e7-93d7-6d6fc14be448_1320x770_164235-1024x597.jpg"
+                            alt="Judges of Rap of China (left to right): Will Pan, MC HotDog, Kris Wu, Chang chen Yue">
+                            <figcaption class="image_captions">Judges of Rap of China (left to right): Will Pan, MC HotDog, Kris Wu, Chang chen Yue. Photo:China Insider</figcaption>
+                        </div>
+                    
+                        <p>The genre hit the mainstream only recently, with the success of the 2017 singing contest <span style="font-style:italic">The Rap of China</span>
+                            – a reality show produced by Nasdaq-listed iQIYI, often dubbed China’s Netflix.</p>
+
+                        <p>While initially ambivalent about the political connotations of hip hop, Chinese television and internet 
+                        censors ultimately allowed rap music to thrive – so long as it promoted the ruling Communist Party’s
+                        ideology.</p>
+
+                        <p>Chinese rap features rap beats, baggy shirts, and dreadlocks (<span style="font-style:italic">zangbian</span> in Mandarin, literally “dirty braids”), 
+                        but the anti-establishment tone has been replaced with a 
+                        <a class="article_links"
+                        href="https://www.inkstonenews.com/politics/rap-songs-fuel-chinas-propaganda-war-hong-kong-protests/article/3023932" target="_blank">
+                        patriotic, uplifting one</a>.</p>
+
+                        <p>Nathanel Amar, a researcher on China’s popular music with the French Centre for Research on
+                        Contemporary China in Taipei, said the revamped Chinese hip hop was a “non-historical” one, stripped of its
+                        links with racism and injustice.</p>
+
+                        <p>Hip hop is closely tied to the struggles of the African-American community, and has played a key part in
+                        their fight for civil rights. But in China, many hip-hop artists do not see themselves as carrying the torch of 
+                        black music. Instead, they are just riding an international music trend and adapting it to a Chinese context.</p>
+                    </section><br>
+                    <!--Enlarged Quote 1-->        
+                    <div class="quote-graphic-container">
+                        <div class="quotemarks">
+                            <div class="quote_shapes">
+                                <div class="quote_square1"></div>
+                                <div class="quote_square2"></div>
+                                <div id="triangles">
+                                    <div class="quote_triangle1"></div>
+                                    <div class="quote_triangle2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quotetext">
+                            <div class="quotation">In China, people live soundly and peacefully. We don’t need to revolt with music</div>
+                            <div class="quote_author">- Sun Bayi, contestant, The Rap of China</div>
+                            <!--Social Media Links-->
+                            <div style=" margin-top:5vh; display:inline-block; vertical-align: top;">
+                                <span style="height:40px;">SHARE</span>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.inkstonenews.com%2Farts%2Fwhy-chinas-hip-hop-stars-are-staying-silent-black-lives-matter%2Farticle%2F3089730%3Futm_source%3Dfacebook%26utm_medium%3Dshare%26utm_campaign%3Dshare_button&src=sdkpreparse&quote=&quot;In China%2C people live soundly and peacefully. We don’t need to revolt with music&quot;%2C Sun Bayi%2C contestant%2C The Rap of China" target="_blank">
+                                    <img style="width:30px;height:25px;"src="https://cdn1.iconfinder.com/data/icons/simple-icons/2048/facebook-2048-black.png" alt="facebook icon">
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?text=&quot;In%20China%2C%20people%20live%20soundly%20and%20peacefully.%20We%20don’t%20need%20to%20revolt%20with%20music&quot;%2C%20Sun%20Bayi%2C%20contestant%2C%20The%20Rap%20of%20China&url=https%3A%2F%2Fwww.inkstonenews.com%2Farts%2Fwhy-chinas-hip-hop-stars-are-staying-silent-black-lives-matter%2Farticle%2F3089730%3Futm_source%3Dtwitter%26utm_medium%3Dshare%26utm_campaign%3Dshare_button&related=&via=InkstoneNews" target="_blank">
+                                    <img style="width:30px;height:25px;"src="https://cdn1.iconfinder.com/data/icons/simple-icons/2048/twitter-2048-black.png" alt="facebook icon">
+                                </a>
+                                <a href="https://www.inkstonenews.com/arts/why-chinas-hip-hop-stars-are-staying-silent-black-lives-matter/article/3089730?edition=weekend" target="_blank">
+                                    <img style="width:30px;height:20px;"src="https://img.pngio.com/sms-email-text-messaging-logo-computer-icons-envelope-mail-email-png-black-900_720.jpg" alt="facebook icon">                    
+                                </a>
+                                <hr style="height:7.5px;background-color:black;">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Article Section 4-->
+                    <section id="section_4">
+                    <p>Sun, the Beijing rapper, was a contestant on <span style="font-style:italic">The Rap of China</span>. He writes hip-hop songs about everyday life
+                        in China, from complaining about the pressure on young people to get married early to cheering for the
+                        government’s efforts against the Covid-19 pandemic.</p>
+
+                        <p>The 29-year-old believes the <span style="font-style:italic">F*** tha Police</span> type of protest hip-hop does not suit his own country.</p>
+
+                        <p>"Black people use music as a tool of revolution against racial inequality. I think it’s the correct thing to do
+                        that they are defending the rights of their race,” Sun said. “In China, people live soundly and peacefully. We 
+                        don’t need to revolt with music.”</p>
+                    </section>
+                    <!--Article Section 5-->
+                    <section id="section_5">
+                        <!--Article Image 2-->
+                        <div id="article_img2">
+                            <img class="article_images" 
+                            src="https://cdn1.thr.com/sites/default/files/2018/11/jaychou.jpg"
+                            alt="Taiwanese Rapper Jay Chou">
+                            <figcaption class="image_captions">Jay Chou, a Mando-pop superstar, has combined elements of hip hop, R&B and Chinese traditional music in his works. Photo: The Hollywood Reporter</figcaption>
+                        </div><br>
+                    
+                        <p><a class="article_links"
+                        href="https://www.inkstonenews.com/society/chinas-draft-bill-permanent-residency-unleashes-hostile-comments-against-foreigners/article/3074244" target="_blank">
+                        Racist sentiment</a> in Chinese society has contributed to the indifference. Black people in China have 
+                        complained of <a class="article_links"
+                        href="https://www.inkstonenews.com/society/black-people-are-not-allowed-mcdonalds-china-apologizes-discrimination/article/3079643" target="_blank">
+                        discrimination</a> and stereotypes. When Chinese rapper PG One came under fire for 
+                        promoting sexism and drug use in his songs in 2018, he <a class="article_links"
+                        href="https://www.scmp.com/news/china/society/article/2127038/chinese-rapper-under-fire-sexist-lyrics-blames-influence-black?_ga=2.189726062.413029666.1592698133-1999756588.1592506096" target="_blank">
+                        blamed the influence of black music</a>.</p>
+
+                        <p>Stephanie Shonekan, an ethnomusicologist and professor of Afro-American Studies at the University of 
+                        Massachusetts, Amherst, said while cultural products of black Americans had spread globally, the black 
+                        experience and histories embedded in them were often ignored.</p>
+
+                        <p>The Refusal to attribute African-American music to black people was part of what the anti-racism 
+                        movement was fighting against, she said.</p>
+
+                        <p>"We can’t talk about Western classical music without thinking about Beethoven and Mozart,” she said. 
+                        “When we think of Black Lives Matter, it symbolizes this idea that we are human beings too, that we create 
+                        foundational knowledge, whether it’s intellectually, musically, culturally. These histories of black genius and 
+                        black creativity matter.”</p>
+
+                        <p>Beijing’s propaganda against all civil activism has also played a part. In China, the heavily censored state 
+                        media outlets have reported the Black Lives Matter protests as destructive, chaotic riots that demonstrate 
+                        the failure of American democracy, instead of a rights movement that could bring positive changes.</p>
+
+                        <p>Patriotic hip-hop group CD Rev, known for rapping for nationalistic causes, made a music video titled I 
+                        Can’t Breathe, which trolls American politicians for supporting the Hong Kong protests but makes few 
+                        mentions of black rights.</p>
+
+                        <p>"You said you gotta fight, Hong Kong, we stand with you,” the rapping goes. “Why don’t you say this again 
+                        to your own people. You want this stop, you want a peace demonstration. Not a party of mobs. Stop being 
+                        the world police and mind your own business.”</p>
+                    </section><br><br>
+                    <!--Article Section 6-->
+                    <section id="section_6">
+                        <!--Article Video-->
+                        <div id="video">
+                        <iframe class="article_images" height="400px" src="https://www.youtube.com/embed/eSAo3T_6M4M" 
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe></div><br><br>
+                    
+                        <p>A Shanghai-based rapper called Mr. Weezy said he watched the scenes of looting and vandalism posted by 
+                        state media on Douyin, TikTok’s Chinese version. While he was all for racial equality, he said too many 
+                        “rioters” were participating in the continuing movement.</p>
+
+                        <p>The musician, who raps in Shanghainese, said his own music would always be linked with black culture, but 
+                        he did not believe he had a particular duty in fighting for black rights. “You have to advocate for justice, 
+                        instead of just defending one group of people.”</p>
+
+                        <p>The danger of touching any political topic is also putting Chinese celebrities off. Expressing political views 
+                        that deviate from the official ideology, even just by <a class="article_links"
+                        href="https://www.inkstonenews.com/politics/hong-kong-actress-charmaine-sheh-denies-supporting-anti-extradition-protests/article/3014491" target="_blank">
+                        tapping a “like” button</a> on social media, could cost one’s 
+                        entertainment career in China.</p>
+
+                        <p>Most celebrities in China have simply avoided taking a side on any social issues, except when they share 
+                        posts from Communist Party mouthpieces. During the Hong Kong protest movement, <a class="article_links"
+                        href="https://www.inkstonenews.com/politics/higher-brothers-and-other-chinese-rappers-stand-behind-china-hong-kong-protests/article/3022957" target="_blank"> 
+                        many Chinese </a>
+                        rappers followed state media in supporting the city’s police.</p>
+                    </section><br>
+                    <!--Enlarged Quote 2-->
+                    <div class="quote-graphic-container">
+                        <div class="quotemarks">
+                            <div class="quote_shapes">
+                                <div class="quote_square1"></div>
+                                <div class="quote_square2"></div>
+                                <div id="triangles">
+                                    <div class="quote_triangle1"></div>
+                                    <div class="quote_triangle2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quotetext">
+                            <div class="quotation">Otherwise they are partaking in the legacy of white supremacy, like you can oppress a people to the point where you render them invisible</div>
+                            <div class="quote_author">- Stephanie Shonekan, University of Massachusetts, Amherst</div>
+                            <!--Social Media Links-->
+                            <div style=" margin-top:5vh; display:inline-block; vertical-align: top;">
+                                <span style="height:40px;">SHARE</span>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.inkstonenews.com%2Farts%2Fwhy-chinas-hip-hop-stars-are-staying-silent-black-lives-matter%2Farticle%2F3089730%3Futm_source%3Dfacebook%26utm_medium%3Dshare%26utm_campaign%3Dshare_button&src=sdkpreparse&quote=&quot;Otherwise they are partaking in the legacy of white supremacy%2C like you can oppress a people to the point where you render them invisible&quot;%2C Stephanie Shonekan%2C University of Massachusetts%2C Amherst" target="_blank">
+                                    <img style="width:30px;height:25px;"src="https://cdn1.iconfinder.com/data/icons/simple-icons/2048/facebook-2048-black.png" alt="facebook icon">
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?text=&quot;Otherwise%20they%20are%20partaking%20in%20the%20legacy%20of%20white%20supremacy%2C%20like%20you%20can%20oppress%20a%20people%20to%20the%20point%20where%20you%20render%20them%20invisible&quot;%2C%20Stephanie%20Shonekan%2C%20University%20of%20Massachusetts%2C%20Amherst&url=https%3A%2F%2Fwww.inkstonenews.com%2Farts%2Fwhy-chinas-hip-hop-stars-are-staying-silent-black-lives-matter%2Farticle%2F3089730%3Futm_source%3Dtwitter%26utm_medium%3Dshare%26utm_campaign%3Dshare_button&related=&via=InkstoneNews" target="_blank">
+                                    <img style="width:30px;height:25px;"src="https://cdn1.iconfinder.com/data/icons/simple-icons/2048/twitter-2048-black.png" alt="facebook icon">
+                                </a>
+                                <a href="https://www.inkstonenews.com/arts/why-chinas-hip-hop-stars-are-staying-silent-black-lives-matter/article/3089730?edition=weekend" target="_blank">
+                                    <img style="width:30px;height:20px;"src="https://img.pngio.com/sms-email-text-messaging-logo-computer-icons-envelope-mail-email-png-black-900_720.jpg" alt="facebook icon">                    
+                                </a>
+                                <hr style="height:7.5px;background-color:black;">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Article Section 7-->
+                    <section id="section_7" style="padding-top:15vh;">
+                        <p>Shonekan said she hoped more hip-hop artists and fans could speak up. Black people brought with them
+                        their music as they were transported to America as slaves, she said, and the legacy could not be removed 
+                        from today’s blues, soul music, jazz, hip hop and R&B.</p>
+
+                        <p>“I do believe they have a moral duty,” she said. “Otherwise they are partaking in the legacy of white 
+                        supremacy, like you can oppress a people to the point where you render them invisible.”</p>
+
+                        <p>The silence of Chinese rappers has disappointed some of their American peers and fans. Members of 
+                        Higher Brothers, the most successful Chinese rap group in the US, were criticized for merely reposting their 
+                        company 88rising’s #BlackoutTuesday post on Instagram, according to 
+                        <a class="article_links" href="https://variety.com/2020/music/news/88rising-rich-brian-bohan-phoenix-black-lives-matter-1234629956/" target=_blank>
+                        a <i>Variety</i> report.</a></p>
+
+                        <p>88rising said this month that the company and artists had donated $60,000 to anti-racism funds. Higher 
+                        Brothers commands fees of $50,000 to $120,000 for individual performances, according to the report.</p>
+                    </section>
+                    <!--Article Section 7-->
+                    <section id="section_5">
+                        <!--Article Image 3-->
+                        <div id="article_img3">
+                            <img class="article_images" 
+                            src="https://nails.newsela.com/s3/newsela-media/article_media/2018/11/china-hip-hop-dance-class-170fea66.jpg?crop=0%2C23%2C1366%2C791&height=497&width=885"
+                            alt="Taiwanese Rapper Jay Chou">
+                            <figcaption class="image_captions">A hip-hop dance class in Beijing in October 2018. Hip hop has surged in popularity thanks to the reality show ’The Rap of China.’ Photo:Newsela</figcaption>
+                        </div><br>
+                        <p>One of its members, Knowknow, apologized for the late show of support on June 3, adding that he had 
+                        been thinking about whether there was anything he could do.</p>
+
+                        <p>“I will be good on my part,” he wrote. “Wherever I am, I will always respect my black friends.” (The top 
+                        comments asked why he had not spoken up for Hong Kong protesters and the Uygur minority in China.)</p>
+
+                        <p>Nasty Ray, a rapper in Beijing, is one of the lesser known artists to have voiced support for the anti-racism 
+                        protests on WeChat and Weibo. He said he was making a new mix titled “Black Lives Matter” to show his 
+                        support.</p>
+
+                        <p>“Hip hop is not just music, it is also a culture and a lifestyle,” he said, adding that he grew up listening to 
+                        black music. “When there’s injustice, any people with a conscience should speak up.”</p>
+                    </section>
+                </article>
+                <footer>
+                    <span class="v3"></span>
+                    <div id="footer-info">
+                        <div id="pic-name">
+                            <a href="https://www.inkstonenews.com/author/viola-zhou">
+                                <img style="border-radius: 30px; height:10vh;"
+                                src="https://cdn.i-scmp.com/sites/default/files/styles/140x140/public/d8/images/author/pic/2019/04/12/img_2910_0.jpg?itok=CjZKj8uY&v=1555067135" alt="Viola Zhou profile pic">
+                            </a>
+                                <p class="bold-text" style="margin-left:5.5vw;margin-top:-10vh;"> Viola Zhou </p><br>
+                            <p style=margin-left:5.5vw;margin-top:-5vh;">
+                            <a href="https://www.inkstonenews.com/arts/why-chinas-hip-hop-stars-are-staying-silent-black-lives-matter/article/3089730?edition=weekend" target="_blank">
+                                <img style="width:30px;height:20px;"src="https://img.pngio.com/sms-email-text-messaging-logo-computer-icons-envelope-mail-email-png-black-900_720.jpg" alt="facebook icon">                    
+                            </a>
+                            <a href="https://twitter.com/violazhouyi" target="_blank">
+                                <img style="width:30px;height:25px;padding-left:1vw;"src="https://cdn1.iconfinder.com/data/icons/simple-icons/2048/twitter-2048-black.png" alt="facebook icon">
+                            </a> 
+                            </p>                             
+                        </div>
+                        <div id="description">
+                            <p>Viola is a multimedia producer at Inkstone. She covered Chinese politics for the South China Morning Post.</p>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>
