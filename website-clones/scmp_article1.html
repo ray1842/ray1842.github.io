@@ -1,0 +1,366 @@
+<html>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>  
+    <title>
+        Hong Kong polls to be postponed for second year as part of Beijing’s planned overhaul of elections, with expansion in store for legislature, Election Committee | South China Morning Post
+    </title>
+    <!--https://www.scmp.com/news/hong-kong/politics/article/3124084/chinas-two-sessions-dominant-theme-hong-kong-be-ensuring-->
+    <style>
+        body{
+            margin:0;
+            font-size: 14pt;
+            display: grid;
+            grid-template-columns: 27.5% 55%;
+            max-width: 100%;
+            
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .sidebar{
+            grid-column:1;
+            column-width: 33%;
+            background-color: blue;
+        }
+        main{
+            grid-column:2;
+            font-family: 'Merriweather', serif;
+        }
+        .topics{
+            font-family: Roboto, Arial, sans-serif;
+            font-weight: normal;
+            
+        }
+        .topics :only-child{
+            text-decoration: none;
+            color:#666;
+        }
+        #article-title{
+            font-size:2.1rem;
+            font-weight: 900;
+        }
+        .sub-title{
+            font-family: Roboto, Arial, sans-serif;
+            font-weight: normal;
+            font-size:1.375rem;
+        }
+        #top-authors{
+            display:flex;
+            flex-direction: row;
+            font-family: Roboto, Arial, sans-serif;
+            font-size:0.8rem;
+            font-weight:600;
+        }
+        /*author photos*/
+        #top-authors :first-child{
+            border-radius: 50%;
+            position: relative;
+        }
+        #top-author-photos{            
+            filter:grayscale(100%);
+            
+        }
+        #top-author-photos :first-child{
+            z-index: 1;
+        }
+        #top-author-photos :nth-child(2){
+            margin-left:-20px;
+
+        }
+        #top-author-photos :nth-child(3){
+            margin-left:-20px;
+           
+        }
+        /*author names*/
+        #top-authors :nth-child(2)>a{
+            text-decoration: none;
+            color:#001246;
+        }
+        #top-authors :nth-child(2)>a:hover{
+            text-decoration: underline;
+        }
+        #author-section{
+            margin-left:2%;
+        }
+        #author-bar{
+            background-color:#ffca05;
+            border-color: #ffca05;
+            width:2%;
+            height:0.4%;
+            margin-left: 0%;
+            border:none;
+        }
+       
+        #image {
+            -moz-transition: transform 1s;
+            -webkit-transition: transform 1s;
+            transition: transform 1s;
+            
+        }
+
+        .flip {
+            transform: rotate(-180deg);
+        }
+        .img-captions{
+            font-family: Roboto, Arial, sans-serif;
+            font-size:0.8rem;
+            font-weight:400;
+            margin-top:0.6rem;
+            margin-left:0.8rem;
+            margin-right:0.8rem;
+            color:#6f6f6f;
+        }
+        #main-contents{
+            display:grid;
+            grid-template-columns: 72% 22.5%;
+        }
+        article{
+            grid-column: 1;
+            font-weight:300;
+            font-family:"Merriweather", serif;
+            font-style: normal;
+            font-size:1.1rem;
+        }
+        iframe{
+            width:100%;
+            height:25%;
+        }
+        .camera-icon{
+            width:2.5%;
+            padding-top:1%;
+        }
+        .media-captions{
+            font-family: Roboto, Arial, sans-serif;
+            font-size:0.8rem;
+            font-weight:400;
+            margin-left:0.8rem;
+            margin-right:0.8rem;
+            color:#6f6f6f;
+        }
+        
+        .mid-article-links{
+            display:grid;
+            margin-left:5%;
+            border-style: solid;
+            border-width: thin;
+            border-top-color: #6f6f6f;
+            border-bottom-color: #6f6f6f;
+            border-left-color: white;
+            border-right-color: white;
+            margin-bottom:10%;
+            margin-top:10%;
+        }
+        .mid-article-links-title{
+            grid-column: 1;
+            width:115%;
+        }
+        .mid-article-links-title:hover{
+            text-decoration: underline;
+        }
+        .mid-article-links-img{
+            grid-column: 2;
+            margin-top:5%;
+            width:60%;
+            height:100%;
+            margin-left:40%;
+        }
+        .article-images{
+            width:100%;
+            margin-bottom:2%;
+        }
+        /*Right Side bar*/
+        #read-more-sec{
+            grid-column: 2;
+            margin-left:10%;
+            font-family: Roboto, Arial, sans-serif;
+
+        }
+        .read-more{
+            font-size:0.75rem;
+        }
+        .read-more-titles{
+            font-weight:800;
+            margin-bottom:25%;
+        }
+        @media screen and (max-width: 950px) {   #read-more-sec { display: none;} }
+        @media screen and (max-width: 950px) {   #main-contents { grid-template-columns: 100%;} }
+        @media screen and (max-width: 950px) {   body { grid-template-columns: 20% 70%;} }
+        @media screen and (max-width: 950px) {   #top-author-photos { width:100%;} }
+        
+      
+    </style>
+    <body>
+        <div class="sidebar"><p>p</p></div>
+        <main>
+            <div class="article">
+                <div>
+                    <span class="topics" style="font-weight: lighter;">
+                        <a href="https://www.scmp.com/news/hong-kong">
+                            Hong Kong/
+                        </a>
+                    </span>
+                    <span class="topics">
+                        <a href="https://www.scmp.com/news/hong-kong/politics">
+                             Politics
+                        </a>
+                    </span>
+                </div>
+                <h1 id="article-title">
+                    Hong Kong polls to be postponed for second year as part of Beijing’s planned overhaul of elections, 
+                    with expansion in store for legislature, Election Committee
+                </h1>
+                <ul class="sub-title">
+                    <li>
+                        Legislative Council could have up to 90 lawmakers and source says election likely to be deferred until 2022
+                    </li>
+                    <li>
+                        Beijing placed reform of city’s elections on the agenda of its annual ‘two sessions’ meetings that began on Thursday
+                    </li>
+                </ul>
+                <div id="top-authors">
+                    <div id="top-author-photos">
+                        <a href="https://www.scmp.com/author/tony-cheung">
+                            <img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=70,format=auto/sites/default/files/styles/118x118/public/tony_cheung.png?itok=9gIeblro">
+                        </a>
+                        <a href="https://www.scmp.com/author/william-zheng">
+                            <img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=70,format=auto/sites/default/files/styles/118x118/public/images/author/pic/2019/02/13/byline01copy.jpg?itok=Ox2bOlUS">
+                        </a>
+                        <a href="https://www.scmp.com/author/lilian-cheng">
+                            <img src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=70,format=auto/sites/default/files/styles/118x118/public/d8/images/author/pic/2019/11/28/scmp_hk_desk_miss_lilian_cheng_-_nov_2019.jpg?itok=H-72N6F3">
+                        </a>
+                    </div>
+                    <div id="author-section">
+                        <hr id="author-bar">
+                            <div>
+                                <a href="https://www.scmp.com/author/tony-cheung">
+                                    Tony Cheung
+                                </a>
+                                , 
+                                <a href="https://www.scmp.com/author/william-zheng">
+                                    William Zheng
+                                </a>
+                                , and
+                                <a href="https://www.scmp.com/author/lilian-cheng">
+                                    Lillian Cheng
+                                </a>
+                            </div>
+                            <div id="publish-date" >
+                                Published: 4:13pm, 4 Mar, 2021 
+                                <span>
+                                    <img class="toggle" id="image" style="height:0.8rem;" src="https://lh3.googleusercontent.com/proxy/XXa-HelnIQiEQgfYwJDEwU-kbaaaaVrDA4fW8kbNWhskuWdURzHrLEcgGCsaT_JZoocu9y6ASIxk1iSplKbZZoUtEFOUAC1rRV4Hq0G2dXHmwT1K2oJxZFYph0_I-_k"/>
+                                </span>
+                            
+                                <div id="update-date">
+                                    Updated: 6:22am, 5 Mar, 2021
+                                </div>
+                            </div>
+                            <script>
+                                $("#update-date").hide();
+                                $( "#publish-date" ).click(function() {
+                                    $( "#update-date" ).toggle();
+                                });
+                                $(document).ready(function() {
+                                    $( "#publish-date" ).click( function() {
+                                        $("#image").toggleClass('flip');
+                                    });
+                                });
+                                                                
+                            </script>
+                    </div>  
+                </div>
+                <div>
+                    <img style="width:100%" src="https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/methode/2021/03/05/6852200e-7cc1-11eb-9fc3-2f3c8e08d261_image_hires_072243.jpg?itok=mglyOkZj&v=1614900172">
+                    <figcaption class="img-captions">Chinese leaders and delegates attend the opening session of the Chinese People's Political Consultative Conference (CPPCC) at the Great Hall of the People in Beijing.</figcaption>
+                    <figcaption class="img-captions">Photo: Reuters</figcaption>
+                </div>
+                <div id="main-contents">
+                    <article>
+                        <p>
+                            Hong Kong’s Legislative Council could have up to 90 lawmakers, up from the current 70, and the Election Committee that selects the city’s chief executive may add another 300 voters to become a 1,500-member outfit, as part of a drastic overhaul to the electoral system, the Post has learned.
+                        </p>
+                        <p>
+                            On the proposed expansion of Legco, sources said the additional members would be chosen from the Election Committee, which is expected to hold its voting only in December.
+                        </p>
+                        <p>
+                            As such members can only join Legco after December, sources said the postponement of Legco elections was all but certain. Two sources said the polls, delayed from last year to this September because of the Covid-19 pandemic, would be deferred to September 2022.
+                        </p>
+                        <p>
+                            The reason for the delay was that the changes would require local legislative amendments Beijing was not confident could be done before July when the current Legco term ends, other sources indicated.
+                        </p>
+                        <iframe  src="https://www.youtube.com/embed/h9qgGg0gJkw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <figcaption class="media-captions">
+                                <img class="camera-icon" src="https://www.materialui.co/materialIcons/av/videocam_grey_192x192.png">
+                                Annual meeting of China's top political advisory body opens
+                            </figcaption>
+                        <br>
+                        <p>
+                            Sources revealed these proposals were on the cards as Beijing placed the reform of the city’s elections on the agenda of its annual “two sessions” meetings that began on Thursday. The reforms are to fulfil the precept of “patriots governing Hong Kong” deemed necessary for the stability and security of the city.
+                        </p>
+                        <p>
+                            State-run news agency Xinhua reported that an item titled “Improving the Election System of the Hong Kong Special Administrative Region” was listed seventh on the agenda of the National People’s Congress (NPC), whose plenary session starts on Friday.
+                        </p>
+                        <p>
+                            Once passed, the resolution will empower the NPC’s Standing Committee to come up with the details of the changes.
+                        </p>
+                        <a href="https://www.scmp.com/knowledge/topics/china-two-sessions?module=inline_widget_banner&pgtype=article">
+                            <img style="margin-left:5%; width:85%;" src="https://raw.githubusercontent.com/ray1842/Website-clones/master/Assets/scmp_2sessions_img1.png">
+                        </a>
+                        <p>Annex I and II of the Basic Law, which stipulated the composition of the Election Committee and Legco, would need to be changed by the NPCSC, followed by local legislation by Hong Kong’s government and legislature.</p>
+                        <a class="mid-article-links" href="https://www.scmp.com/news/china/politics/article/3123938/china-tipped-send-veteran-trade-official-hong-kong-top-economic">
+                            <p class="mid-article-links-title">
+                                China expected to send veteran trade official to Hong Kong for top economic job<br><br>4 Mar 2021
+                            </p>
+                            <img class="mid-article-links-img"
+                            style="height:80%;"
+                            src="https://cdn.i-scmp.com/sites/default/files/styles/237x147/public/d8/images/methode/2021/03/04/1bbae78a-7a73-11eb-9fc3-2f3c8e08d261_image_hires_090755.jpg?itok=b0x0dy53&v=1614820083">
+                        </a>
+                        <p style="margin-bottom:10%;">
+                            A pro-Beijing source who attended a briefing on Thursday evening chaired by Xia Baolong, director of the State Council’s Hong Kong and Macau Affairs Office, told the Post: “The reforms will touch on both the city’s Legislative Council elections as well as the election committee that picks the chief executive of Hong Kong.”
+                        </p>
+                        <p>
+                            Sources confirmed that the expansion of both Legco and the Election Committee was on the cards.
+                        </p>
+                        <p>
+                            “It’s a complete surgery of the election systems in the city since the handover,” one of them commented.
+                        </p>
+                        <p>
+                            On the Election Committee, sources said the current 117 district councillor seats would be scrapped. Beijing had previously expressed unhappiness with the seats as they would likely be held by opposition activists who took part in the 2019 protests, as it viewed them as anti-government and anti-China elements out to threaten national security.
+                        </p>
+                        
+                        <img class="article-images" src="https://cdn.i-scmp.com/sites/default/files/d8/images/methode/2021/03/05/edf8e8ba-7cc0-11eb-9fc3-2f3c8e08d261_1320x770_072243.jpg">
+                            <figcaption class="media-captions">
+                                Chinese President Xi Jinping attends the opening session of the Chinese People's Political Consultative Conference on <br> Thursday. Photo: Reuters
+                            </figcaption>
+                        <br>
+                    </article>
+                    <div id="read-more-sec">
+                        <a href="https://www.scmp.com/news/hong-kong/politics/article/3123497/hong-kongs-electoral-reform-end-feisty-opposition-and-who">
+                            <p class="read-more">Read More</p>
+                            <img src="https://cdn.i-scmp.com/sites/default/files/styles/237x147/public/d8/images/methode/2021/03/02/51019072-79bc-11eb-8b9d-76c80a88a6d4_image_hires_090202.jpg?itok=LXZ6KCUk&v=1614646940">
+                            <p class="read-more-titles">Reveal of Beijing's political inoculation for Hong Kong looms at...</p>
+                        </a>
+                        <a href="https://www.scmp.com/news/hong-kong/politics/article/3123948/mainland-official-says-hong-kong-electoral-overhaul-will-be">
+                            <p class="read-more">Read More</p>
+                            <img src="https://cdn.i-scmp.com/sites/default/files/styles/237x147/public/d8/images/methode/2021/03/10/c1d99f8a-7c12-11eb-9fc3-2f3c8e08d261_image_hires_003347.jpeg?itok=prU_EjBX&v=1615307638">
+                            <p class="read-more-titles">Mainland officials say lesgislature will take up Hong Kong electoral...</p>
+                        </a>
+                        <a href="https://www.scmp.com/news/hong-kong/politics/article/3123809/hong-kong-not-singapore-and-those-who-challenge-beijings">
+                            <p class="read-more">Read More</p>
+                            <img src="https://cdn.i-scmp.com/sites/default/files/styles/237x147/public/d8/images/methode/2021/03/03/75fb2ada-7b4e-11eb-9fc3-2f3c8e08d261_image_hires_080940.jpeg?itok=aloOwS7s&v=1614730191">
+                            <p class="read-more-titles">Hongkongers who challenge Beijing's authority are separatists...</p>
+                        </a>
+                        <a href="https://www.scmp.com/news/hong-kong/politics/article/3123156/loyalty-not-love-key-element-patriots-governing-hong-kong">
+                            <p class="read-more">Read More</p>
+                            <img src="https://cdn.i-scmp.com/sites/default/files/styles/237x147/public/d8/images/methode/2021/03/10/99856f8e-775b-11eb-8b9d-76c80a88a6d4_image_hires_005603.JPG?itok=tIhV3VgV&v=1615308970">
+                            <p class="read-more-titles">Loyalty, not love, key to 'patrios governing Hong Kong': political...</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
